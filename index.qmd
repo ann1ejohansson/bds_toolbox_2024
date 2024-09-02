@@ -10,7 +10,7 @@ format:
     css: styles.css
 editor: visual
 title-slide-attributes:
-  data-background-image: "images/box_01_31.jpg"
+  data-background-image: "images/coverphoto.jpg"
   data-background-size: auto
   data-background-opacity: "1.0"
   data-background-repeat: repeat
@@ -76,23 +76,23 @@ library(tidyverse)
 
 ### Assignments {.smaller .scrollable}
 
-+---------------------------------+------------------------------------------------+-------------------------------+---------+
-| Assignment                      | Content                                        | Deadline                      | Grading |
-+=================================+================================================+===============================+=========+
-| Data Visualization Assignment 1 | Make a good and bad visualization              | Sunday, September 15th, 23:59 | 15%     |
-|                                 |                                                |                               |         |
-|                                 | Copy this plot                                 |                               |         |
-+---------------------------------+------------------------------------------------+-------------------------------+---------+
-| Data Visualization Assignment 2 | Make a visualization for your final assignment | Sunday, September 22nd, 23:59 | 15%     |
-|                                 |                                                |                               |         |
-|                                 | Copy this (or multiple) plots                  |                               |         |
-+---------------------------------+------------------------------------------------+-------------------------------+---------+
-| Build a Shiny App               | Recreate a Shiny dashboard                     | Sunday, October 13th, 23:59   | 10%     |
-+---------------------------------+------------------------------------------------+-------------------------------+---------+
-| Final assignment                | Make 3 visualizations of Prowise Learn data    |                               | 60%     |
-|                                 |                                                |                               |         |
-|                                 | Pitch to Prowise colleagues                    |                               |         |
-+---------------------------------+------------------------------------------------+-------------------------------+---------+
++---------------------------------+------------------------------------------------+-------------------------------+-------------+
+| Assignment                      | Content                                        | Deadline                      | Grading     |
++=================================+================================================+===============================+=============+
+| Data Visualization Assignment 1 | Make a good and bad visualization              | Sunday, September 15th, 23:59 | 15%         |
+|                                 |                                                |                               |             |
+|                                 | Copy this plot                                 |                               |             |
++---------------------------------+------------------------------------------------+-------------------------------+-------------+
+| Data Visualization Assignment 2 | Make a visualization for your final assignment | Sunday, September 22nd, 23:59 | 15%         |
+|                                 |                                                |                               |             |
+|                                 | Copy this (or multiple) plots                  |                               |             |
++---------------------------------+------------------------------------------------+-------------------------------+-------------+
+| Build a Shiny App               | Recreate a Shiny dashboard                     | Sunday, October 13th, 23:59   | 10%         |
++---------------------------------+------------------------------------------------+-------------------------------+-------------+
+| Final assignment                | Make 3 visualizations of Prowise Learn data    |                               | 60%         |
+|                                 |                                                |                               |             |
+|                                 | Pitch to Prowise colleagues                    |                               |             |
++---------------------------------+------------------------------------------------+-------------------------------+-------------+
 
 Data visualization assignments make up a total of 20% of your final BDS Toolbox grade. ::: footer :::
 
