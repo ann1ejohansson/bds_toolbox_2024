@@ -1,0 +1,683 @@
+---
+title: "<span style='color: white;font-size: 0.7em;'>Data Visualization</span>"
+subtitle: "<span style='color: white;'>Behavioral Data Science Toolbox 2024</span>"
+author: "<span style='color: white;'>Lecturers: Abe Hofman, Annie Johansson, Lilian Ye</span>"
+footer: "<span style='color: white;'>Cover photo (made in R!) by <a href='https://art.djnavarro.net' style='color: pink; text-decoration: underline;'>Danielle Navarro</a></span>"
+format: 
+  revealjs:
+    theme: "white"
+    logo: images/uva_logo_white_screencapture.png
+    css: styles.css
+editor: visual
+title-slide-attributes:
+  data-background-image: "images/box_01_31.jpg"
+  data-background-size: auto
+  data-background-opacity: "1.0"
+  data-background-repeat: repeat
+---
+
+```{r, include=FALSE}
+library(tidyverse)
+```
+
+# Course overview 📋 {background-color="#8000FF"}
+
+::: footer
+:::
+
+## Content {.smaller .scrollable}
+
+::: footer
+:::
+
+### Schedule
+
++-----------------+----------------------------------+--------------------------------------------------------------------------------------------------------------------+-----------------------------------------+
+| When            | What                             | Self-study                                                                                                         | Tutorial                                |
++=================+==================================+====================================================================================================================+=========================================+
+| Friday, 08/09\  | **Data Visualization Session 1** | \[Read\] DV book ch. 1, 3                                                                                          | Work on Data Visualization Assignment 1 |
+| 12.00 - 15.00   |                                  |                                                                                                                    |                                         |
+|                 | Good and bad plots               | \[Watch videos\] Fundamentals of Data Visualization                                                                |                                         |
+|                 |                                  |                                                                                                                    |                                         |
+|                 | ggplot basics                    |                                                                                                                    |                                         |
++-----------------+----------------------------------+--------------------------------------------------------------------------------------------------------------------+-----------------------------------------+
+| Tuesday, 17/09\ | **Data Visualization Session 2** | \[Read\] DV Book ch. 3.7, 4.3, 5.3, 5.5, 5.6, 6.0, 6.1, 6.2, 8.1, 8.2, 8.3                                         | Work on Data Visualization Assignment 2 |
+| 15.00 - 18.00   |                                  |                                                                                                                    |                                         |
+|                 | Better plots                     | \[Watch videos\] Themes, Recycling Themes, Trend lines / Stats, Color scheme, Multiple plots, Facets, Saving plots |                                         |
+| \               |                                  |                                                                                                                    |                                         |
+|                 | Introduction to final assignment |                                                                                                                    |                                         |
++-----------------+----------------------------------+--------------------------------------------------------------------------------------------------------------------+-----------------------------------------+
+| Tuesday, 08/10  | **Build a Shiny App**            | Extra/optional material: Shiny files (canvas)                                                                      | Work on Shiny Assignment                |
+|                 |                                  |                                                                                                                    |                                         |
+| 15.00 - 18.00   |                                  |                                                                                                                    |                                         |
++-----------------+----------------------------------+--------------------------------------------------------------------------------------------------------------------+-----------------------------------------+
+
+: {tbl-colwidths="\[30,40, 50, 30\]"}
+
+## Content {.smaller .scrollable}
+
+::: footer
+:::
+
+### Learning Goals
+
+-   Design visualizations that communicate the intended message clearly
+
+-   Build data visualizations using the ggplot2 library in R
+
+-   Build interactive dashboards
+
+-   Pitch the results of a data visualization project to a client ::: footer :::
+
+## Content {.smaller .scrollable}
+
+::: footer
+:::
+
+### Assignments {.smaller .scrollable}
+
++---------------------------------+------------------------------------------------+-------------------------------+---------+
+| Assignment                      | Content                                        | Deadline                      | Grading |
++=================================+================================================+===============================+=========+
+| Data Visualization Assignment 1 | Make a good and bad visualization              | Sunday, September 15th, 23:59 | 15%     |
+|                                 |                                                |                               |         |
+|                                 | Copy this plot                                 |                               |         |
++---------------------------------+------------------------------------------------+-------------------------------+---------+
+| Data Visualization Assignment 2 | Make a visualization for your final assignment | Sunday, September 22nd, 23:59 | 15%     |
+|                                 |                                                |                               |         |
+|                                 | Copy this (or multiple) plots                  |                               |         |
++---------------------------------+------------------------------------------------+-------------------------------+---------+
+| Build a Shiny App               | Recreate a Shiny dashboard                     | Sunday, October 13th, 23:59   | 10%     |
++---------------------------------+------------------------------------------------+-------------------------------+---------+
+| Final assignment                | Make 3 visualizations of Prowise Learn data    |                               | 60%     |
+|                                 |                                                |                               |         |
+|                                 | Pitch to Prowise colleagues                    |                               |         |
++---------------------------------+------------------------------------------------+-------------------------------+---------+
+
+Data visualization assignments make up a total of 20% of your final BDS Toolbox grade. ::: footer :::
+
+## Content {.smaller .scrollable}
+
+::: footer
+:::
+
+### Materials {.smaller .scrollable}
+
+::: {layout-ncol="3"}
+![[r4ds.had.co.nz](https://r4ds.had.co.nz/data-visualisation.html)](images/book_wickham.png){fig-align="left" width="333"}
+
+![[socviz.co](https://socviz.co/)](images/book_healy.jpg){fig-align="left" width="400"}
+
+-   [Videos on canvas](https://canvas.uva.nl/courses/47312/modules)
+:::
+
+#### Extra resources
+
+-   [Claus Wilke: Fundamentals of Data Viz](https://clauswilke.com/dataviz/)
+
+-   <https://psyteachr.github.io/introdataviz/plotstyle.html>
+
+# Bad plots 💩 {background-color="#8000FF"}
+
+::: footer
+:::
+
+## Today {style="h2 {   color: blue}"}
+
+::: footer
+:::
+
+📊 What makes a plot good (and bad)?
+
+🪄 Guiding principles
+
+✏️ Work on assignment 1
+
+## Why visualize data? 💬
+
+::: footer
+:::
+
+::: fragment
+![](images/clipboard-728177152.png){width="400"}
+:::
+
+------------------------------------------------------------------------
+
+## Anscombe's quartet {.smaller}
+
+::: columns
+::: {.column width="50%"}
+-   ![Source: Same stats, different graphs](images/clipboard-3284524532.png) ![Source: Wikipedia](images/anscombe_wiki.png)
+:::
+
+::: {.column width="50%"}
+```{r}
+#| echo: true
+#| code-fold: true
+#| fig.height: 10
+library("datasauRus")
+datasaurus_dozen %>% 
+  ggplot2::ggplot(aes(x = x, y = y, color = dataset)) +
+  ggplot2::geom_point() +
+  ggplot2::theme_void() +
+  ggplot2::geom_smooth(method = "lm", color = "gray", fill = "gray", alpha = .5) +
+  ggplot2::theme(legend.position = "none", text = element_text(size = 30)) +
+  ggplot2::facet_wrap(~dataset, ncol = 4)
+```
+:::
+:::
+
+::: footer
+Packages: [datasauRus](https://jumpingrivers.github.io/datasauRus/), [anscombiser](https://paulnorthrop.github.io/anscombiser/).
+
+More information: [Same Stats, Different Graphs](https://www.autodesk.com/research/publications/same-stats-different-graphs), [socviz.co](https://socviz.co/lookatdata.html#why-look-at-data).
+:::
+
+## Exploratory versus explanatory {.smaller .scrollable}
+
+::: columns
+::: {.column width="50%"}
+![Source: [Natalia Kiseleva](https://eolay.tilda.ws/datavizcomics/en)](images/comic_natalia_kiseleva.webp){fig-align="left" width="333"}
+:::
+
+::: {.column width="50%"}
+![Source: [Scott McCloud](https://archive.org/details/understanding-comics/)](images/comic_scott_mccloud.gif){fig-align="left"}
+
+-   **Exploratory**: examine the structure of your data.
+
+-   **Explanatory:** tell a story with your data.
+:::
+:::
+
+::: footer
+Resources: [clauswilke.com](https://clauswilke.com/dataviz/telling-a-story.html) (telling a story and making a point), [susielu.com](https://www.susielu.com/data-viz/storytelling-in-dashboards) (different interpretation of exploratory/explanatory).
+:::
+
+::: notes
+Exploratory in the sense of data exploration. Exploratory in the sense of visualization exploration (as in previous example, where the same data can be plotted in several ways). In both cases, you can create ugly plots.
+
+We focus on explanatory data viz (also bridge to next). Beautiful plots!
+:::
+
+## [🏅 What can we learn about the 2024 Olympics?]{style="font-size: 0.7em;"} {.smaller .scrollable}
+
+::: footer
+:::
+
+::: columns
+::: {.column width="33%"}
+[![Ireland is headed straight for zero?](images/ireland.png){width="100%"}](images/ireland.png)
+:::
+
+::: {.column width="33%"}
+[![Stacked confusion!](images/brazil.jpeg){width="100%"}](images/brazil.jpeg)
+:::
+
+::: {.column width="33%"}
+[![Did the Netherlands place 8th?](images/info_correct.jpeg){width="100%"}](images/info_correct2.jpeg)
+:::
+:::
+
+::: columns
+::: {.column width="50%"}
+[![How long does it take you to understand it?](images/bbc.jpeg){width="75%"}](images/bbc.jpeg)
+:::
+
+::: {.column width="50%"}
+[![Axes? Colors?](images/espn.png){width="75%"}](images/espn.png)
+:::
+:::
+
+## Speed dates 🍷
+
+::: footer
+:::
+
+::: columns
+::: {.column width="40%"}
+-   What do you think about this plot?
+
+-   What elements can be improved?
+
+-   Are there still good things with the plot?
+:::
+
+::: {.column width="60%"}
+![Karl Broman](images/viz_broman_worst_graph.jpg)
+:::
+:::
+
+------------------------------------------------------------------------
+
+🍷
+
+::: columns
+::: {.column width="60%"}
+![reddit.com/r/dataisugly](images/viz_lidl.png){fig-align="left" width="500"}
+:::
+
+::: {.column width="40%"}
+::: fragment
+-   Misleading (or missing) information?
+-   Many data visualizations might have a hidden agenda, due to e.g. marketing strategies.
+:::
+:::
+:::
+
+::: footer
+Check out the classic from Darrel Huff [How to Lie with Statistics](https://www.penguin.co.uk/books/13565/how-to-lie-with-statistics-by-darrell-huff-with-pictures-by-mel-calman/9780140136296) [Lessions from How to Lie with Statistics.](https://towardsdatascience.com/lessons-from-how-to-lie-with-statistics-57060c0d2f19)
+:::
+
+------------------------------------------------------------------------
+
+🍷
+
+::: columns
+::: {.column width="60%"}
+![[Source: reddit.com/r/dataisbeautiful](https://www.reddit.com/r/dataisugly/)](images/data_ink.png){fig-align="left" width="544"}
+:::
+
+::: {.column width="40%"}
+::: fragment
+-   Data to ink ratio?
+:::
+:::
+:::
+
+::: footer
+[How to maximize the data-to-ink ratio](https://www.codeconquest.com/blog/data-ink-ratio-explained-with-example/)
+:::
+
+------------------------------------------------------------------------
+
+### Data to ink ratio
+
+::: columns
+::: {.column width="50%"}
+![](images/data_ink.png)
+:::
+
+::: {.column width="50%"}
+![](images/data_ink2.jpeg)
+:::
+:::
+
+------------------------------------------------------------------------
+
+🍷
+
+::: columns
+::: {.column width="60%"}
+![](images/375215729_284351617686331_1600123719376075083_n.jpg){width="490"}
+:::
+
+::: {.column width="40%"}
+::: fragment
+-   Do the colors make sense?
+:::
+:::
+:::
+
+::: footer
+:::
+
+------------------------------------------------------------------------
+
+🍷
+
+::: columns
+::: {.column width="60%"}
+![](images/all_elements_needed.jpeg){width="490"}
+:::
+
+::: {.column width="40%"}
+::: fragment
+-   Are all elements needed?
+:::
+:::
+:::
+
+::: footer
+:::
+
+------------------------------------------------------------------------
+
+🍷
+
+::: columns
+::: {.column width="60%"}
+![](images/axes_correct.jpeg)
+:::
+
+::: {.column width="40%"}
+::: fragment
+-   Are the axes correct?
+:::
+:::
+:::
+
+::: footer
+:::
+
+------------------------------------------------------------------------
+
+### Are the axes correct?
+
+::: columns
+::: {.column width="60%"}
+![](images/ireland.png)
+:::
+
+::: {.column width="40%"}
+![](images/info_correct.jpeg)
+:::
+:::
+
+::: footer
+:::
+
+------------------------------------------------------------------------
+
+🍷
+
+::: columns
+::: {.column width="60%"}
+![](images/stacked1.png)
+:::
+
+::: {.column width="40%"}
+::: fragment
+-   Is it simple?
+:::
+:::
+:::
+
+::: footer
+:::
+
+------------------------------------------------------------------------
+
+### ⚠️ Stacked bar charts ⚠️
+
+::: columns
+::: {.column width="60%"}
+![](images/stacked2.png)
+:::
+
+::: {.column width="40%"}
+![](images/brazil.jpeg)
+:::
+:::
+
+::: footer
+:::
+
+------------------------------------------------------------------------
+
+🍷
+
+![](images/pie1.png)
+
+::: footer
+:::
+
+------------------------------------------------------------------------
+
+### ⚠️ Pie charts ⚠️
+
+::: columns
+::: {.column width="60%"}
+![](images/pie2.jpeg)
+:::
+
+::: {.column width="40%"}
+![](images/pie3.png) ![](images/pie4.png)
+:::
+:::
+
+::: footer
+:::
+
+------------------------------------------------------------------------
+
+### Visualizing proportions
+
+-   Pie chart, stacked bar, or side-by-side bars?
+
+![](images/proportions.png)
+
+<https://clauswilke.com/dataviz/visualizing-proportions.html#>
+
+::: footer
+:::
+
+------------------------------------------------------------------------
+
+🍷
+
+::: columns
+::: {.column width="60%"}
+![](images/storytelling_before.png)
+:::
+
+::: {.column width="40%"}
+::: fragment
+-   Does it support one conclusion?
+:::
+:::
+:::
+
+::: footer
+:::
+
+------------------------------------------------------------------------
+
+### Storytelling with data - show just one conclusion! ![](images/storytelling_after.png)
+
+::: footer
+:::
+
+------------------------------------------------------------------------
+
+![](images/mathgarden.png)
+
+::: footer
+:::
+
+------------------------------------------------------------------------
+
+### Spurious correlations
+
+::: footer
+:::
+
+![Source: Tyler Vigen](images/spurious_correlation.png){fig-align="left"}
+
+------------------------------------------------------------------------
+
+## One dataset, many visualizations
+
+::: columns
+::: {.column width="50%"}
+```{r}
+#| echo: true
+#| code-fold: true
+library("gt")
+data("pizzaplace")
+pizza_top <- pizzaplace %>%
+  dplyr::mutate(size = factor(size, levels = c("S", "M", "L"))) %>%
+  dplyr::count(name, type, size, price, sort = TRUE) %>%
+  dplyr::top_n(n = 5)
+pizza_top %>%
+  gt::gt() %>%
+  gt::tab_header(title = "Pizza Top 5", subtitle = "2015") %>%
+  gt::fmt_currency(columns = price, currency = "USD") %>%
+  gt::tab_source_note(source_note = gt::md("Source: [pizzaplace dataset](https://gt.rstudio.com/articles/gt-datasets.html#pizzaplace)")) %>%
+  gt::opt_stylize(style = 6)
+```
+:::
+
+::: {.column width="50%"}
+```{r}
+#| echo: true
+#| code-fold: true
+library("ggplot2")
+pizza_top %>%
+  ggplot2::ggplot(aes(x = reorder(name, n, decreasing = TRUE), y = n)) +
+  ggplot2::geom_point(aes(color = type, size = size)) +
+  ggplot2::geom_text(aes(label = price), nudge_y = -30) +
+  ggplot2::labs(title = "Pizza Top 5", subtitle = "2015", x = "name")
+```
+:::
+:::
+
+::: footer
+:::
+
+## One dataset, many visualizations
+
+::: columns
+::: {.column width="50%"}
+```{r}
+#| echo: true
+#| code-fold: true
+library("gt")
+pizza_season <- pizzaplace %>%
+  dplyr::mutate(month = lubridate::month(date, label = TRUE)) %>%
+  dplyr::group_by(month) %>%
+  dplyr::count(type)
+pizza_season %>%
+  tidyr::pivot_wider(names_from = month, values_from = n) %>%
+  gt::gt() %>%
+  gt::tab_header(title = "Pizza Season", subtitle = "2015") %>%
+  gt::tab_source_note(source_note = gt::md("Source: [pizzaplace dataset](https://gt.rstudio.com/articles/gt-datasets.html#pizzaplace)")) %>%
+  gt::opt_stylize(style = 6)
+```
+:::
+
+::: {.column width="50%"}
+```{r}
+#| echo: true
+#| code-fold: true
+#| fig.height: 5
+#| fig.show: "hold"
+library("ggplot2")
+library("lubridate")
+fig_season_1 <- pizza_season %>%
+  ggplot2::ggplot(aes(x = month, y = n, group = type)) +
+  ggplot2::geom_line(aes(linetype = type)) +
+  ggplot2::labs(title = "Pizza Season", subtitle = "2015")
+fig_season_1
+
+fig_season_2 <- pizza_season %>%
+  ggplot2::ggplot(aes(x = month, y = n, group = type)) +
+  ggplot2::geom_bar(aes(fill = type), stat = "identity") +
+  ggplot2::labs(title = "Pizza Season", subtitle = "2015")
+fig_season_2
+```
+:::
+:::
+
+::: footer
+:::
+
+## [Some good examples]{style="font-size: 0.7em;"} {.smaller .scrollable}
+
+[![](images/good1.png){width="100%"}](images/good1.png) [Distributions are informative](https://clauswilke.com/dataviz/histograms-density-plots.html)
+
+::: columns
+::: {.column width="50%"}
+[![](images/good2.png){width="100%"}](images/good2.png)
+:::
+
+::: {.column width="50%"}
+[![](images/good3.png){width="100%"}](images/good3.png)
+:::
+:::
+
+[NYT Graphic - Obamacare spending](https://www.nytimes.com/interactive/2023/09/05/upshot/medicare-budget-threat-receded.html?pgtype=Article&action=click&module=RelatedLinks)
+
+[How to reproduce a NYT graphic](https://sean.netlify.app/post/how-to-reproduce-a-nyt-graphic/)
+
+::: footer
+:::
+
+# Guiding principles 🪄 {background-color="#8000FF"}
+
+::: footer
+:::
+
+## Tips for the best viz
+
+-   Is it **explaining** data?
+
+-   Is the information **complete and correct**?
+
+-   Are **axes** correct? (+ Should they have a zero-point?)
+
+-   Do the **colors** work?
+
+-   Are all **elements** needed?
+
+-   What is the **data to ink ratio?**
+
+-   Is it **understandable & simple?**
+
+-   Does it portray **one conclusion**?
+
+::: footer
+:::
+
+## Break
+
+::: footer
+:::
+
+```{r}
+#| echo: true
+#| results: false
+library("RXKCD")
+RXKCD::getXKCD(which = "833")
+```
+
+## 📝 Own work {.smaller .scrollable}
+
+::: footer
+:::
+
++-------------------------------------+-----------------------------------+-----------------------------------------------------+-------------------------------+
+| Assignment                          | Content                           | Materials                                           | Deadline                      |
++=====================================+===================================+=====================================================+===============================+
+| **Data Visualization Assignment 1** | Make a good and bad visualization | Lecture slides                                      | Sunday, September 15th, 23.59 |
+|                                     |                                   |                                                     |                               |
+|                                     | Copy this plot                    | \[Read\] DV book ch. 1, 3                           |                               |
+|                                     |                                   |                                                     |                               |
+|                                     |                                   | \[Watch videos\] Fundamentals of Data Visualization |                               |
++-------------------------------------+-----------------------------------+-----------------------------------------------------+-------------------------------+
+
+# Better plots 📈 {background-color="#8000FF"}
+
+## Today
+
+More good examples
+
+More data visualization features
+
+Introduce final project
+
+Make groups
+
+Work on:
+
+-   Brainstorm ideas for final project
+
+-   Data vis assignment 2
+
+# Best plots 🥇 {background-color="#8000FF"}
+
+## ... that's up to you! 🫵
+
+## Final assignment
+
+Information about final project
