@@ -2,7 +2,7 @@
 title: "<span style='color: white;font-size: 0.7em;'>Data Visualization</span>"
 subtitle: "<span style='color: white;'>Behavioral Data Science Toolbox 2024</span>"
 author: "<span style='color: white;'>Lecturers: Abe Hofman, Annie Johansson, Lilian Ye</span>"
-footer: "<span style='color: white;'>Cover photo (made in R!) by <a href='https://art.djnavarro.net' style='color: pink; text-decoration: underline;'>Danielle Navarro</a></span>"
+footer: "<span style='color: white;'>Cover photo made in R by <a href='https://art.djnavarro.net' style='color: pink; text-decoration: underline;'>Danielle Navarro</a></span>"
 format: 
   revealjs:
     theme: "white"
