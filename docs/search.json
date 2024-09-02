@@ -25,7 +25,7 @@
     "href": "index.html#content-3",
     "title": "Data Visualization",
     "section": "Content",
-    "text": "Content\n\n\n\nMaterials\n\n\n\n\n\n\n\n\n\nr4ds.had.co.nz\n\n\n\n\n\n\n\nsocviz.co\n\n\n\n\n\nVideos on canvas\n\n\n\n\nExtra resources\n\nClaus Wilke: Fundamentals of Data Viz\nhttps://psyteachr.github.io/introdataviz/plotstyle.html"
+    "text": "Content\n\n\n\nMaterials\n\n\n\n\n\n\nr4ds.had.co.nz\n\n\n\n\n\n\n\nsocviz.co\n\n\n\n\n\nVideos on canvas\n\n\n\n\nExtra resources\n\nClaus Wilke: Fundamentals of Data Viz\nhttps://psyteachr.github.io/introdataviz/plotstyle.html"
   },
   {
     "objectID": "index.html#today",
@@ -46,21 +46,21 @@
     "href": "index.html#anscombes-quartet",
     "title": "Data Visualization",
     "section": "Anscombe’s quartet",
-    "text": "Anscombe’s quartet\n\n\n\n \n\n\n\n\nCode\nlibrary(\"datasauRus\")\ndatasaurus_dozen %&gt;% \n  ggplot2::ggplot(aes(x = x, y = y, color = dataset)) +\n  ggplot2::geom_point() +\n  ggplot2::theme_void() +\n  ggplot2::geom_smooth(method = \"lm\", color = \"gray\", fill = \"gray\", alpha = .5) +\n  ggplot2::theme(legend.position = \"none\", text = element_text(size = 30)) +\n  ggplot2::facet_wrap(~dataset, ncol = 4)\n\n\n\n\n\n\n\n\n\n\n\nPackages: datasauRus, anscombiser.\nMore information: Same Stats, Different Graphs, socviz.co."
+    "text": "Anscombe’s quartet\n\n\n\n \n\n\n\n\nCode\nlibrary(\"datasauRus\")\ndatasaurus_dozen %&gt;% \n  ggplot2::ggplot(aes(x = x, y = y, color = dataset)) +\n  ggplot2::geom_point() +\n  ggplot2::theme_void() +\n  ggplot2::geom_smooth(method = \"lm\", color = \"gray\", fill = \"gray\", alpha = .5) +\n  ggplot2::theme(legend.position = \"none\", text = element_text(size = 30)) +\n  ggplot2::facet_wrap(~dataset, ncol = 4)\n\n\n\n\n\n\n\n\n\n\n\n\nPackages: datasauRus, anscombiser.\nMore information: Same Stats, Different Graphs, socviz.co."
   },
   {
     "objectID": "index.html#exploratory-versus-explanatory",
     "href": "index.html#exploratory-versus-explanatory",
     "title": "Data Visualization",
     "section": "Exploratory versus explanatory",
-    "text": "Exploratory versus explanatory\n\n\n\n\n\nSource: Natalia Kiseleva\n\n\n\n\n\n\nSource: Scott McCloud\n\n\n\nExploratory: examine the structure of your data.\nExplanatory: tell a story with your data.\n\n\n\nResources: clauswilke.com (telling a story and making a point), susielu.com (different interpretation of exploratory/explanatory).\n\n\nExploratory in the sense of data exploration. Exploratory in the sense of visualization exploration (as in previous example, where the same data can be plotted in several ways). In both cases, you can create ugly plots.\nWe focus on explanatory data viz (also bridge to next). Beautiful plots!"
+    "text": "Exploratory versus explanatory\n\n\n\n\n\nSource: Natalia Kiseleva\n\n\n\n\n\n\nSource: Scott McCloud\n\n\n\nExploratory: examine the structure of your data.\nExplanatory: tell a story with your data.\n\n\n\n\nResources: clauswilke.com (telling a story and making a point), susielu.com (different interpretation of exploratory/explanatory).\n\n\nExploratory in the sense of data exploration. Exploratory in the sense of visualization exploration (as in previous example, where the same data can be plotted in several ways). In both cases, you can create ugly plots.\nWe focus on explanatory data viz (also bridge to next). Beautiful plots!"
   },
   {
     "objectID": "index.html#what-can-we-learn-about-the-2024-olympics",
     "href": "index.html#what-can-we-learn-about-the-2024-olympics",
     "title": "Data Visualization",
     "section": "🏅 What can we learn about the 2024 Olympics?",
-    "text": "🏅 What can we learn about the 2024 Olympics?\n\n\n\n\n\n\n\n\nIreland is headed straight for zero?\n\n\n\n\n\n\nStacked confusion!\n\n\n\n\n\n\nDid the Netherlands place 8th?\n\n\n\n\n\n\n\n\nHow long does it take you to understand it?\n\n\n\n\n\n\nAxes? Colors?"
+    "text": "🏅 What can we learn about the 2024 Olympics?\n\n\n\n\n\n\n\n\nIreland is headed straight for zero?\n\n\n\n\n\n\nStacked confusion!\n\n\n\n\n\n\nDid the Netherlands place 8th?\n\n\n\n\n\n\n\n\n\nHow long does it take you to understand it?\n\n\n\n\n\n\nAxes? Colors?"
   },
   {
     "objectID": "index.html#speed-dates",
@@ -88,7 +88,7 @@
     "href": "index.html#some-good-examples",
     "title": "Data Visualization",
     "section": "Some good examples",
-    "text": "Some good examples\n Distributions are informative\n\n\n\n\n\n\nNYT Graphic - Obamacare spending\nHow to reproduce a NYT graphic"
+    "text": "Some good examples\n Distributions are informative\n\n\n\n\n\n\n\nNYT Graphic - Obamacare spending\nHow to reproduce a NYT graphic"
   },
   {
     "objectID": "index.html#tips-for-the-best-viz",
