@@ -8,7 +8,6 @@ format:
     theme: "white"
     logo: images/uva_logo.png
     css: styles.css
-    smaller: true
 editor: visual
 title-slide-attributes:
   data-background-image: "images/coverphoto.jpg"
@@ -77,23 +76,23 @@ library(tidyverse)
 
 ### Assignments {.smaller .scrollable}
 
-+---------------------------------+------------------------------------------------+-------------------------------+-------------+
-| Assignment                      | Content                                        | Deadline                      | Grading     |
-+=================================+================================================+===============================+=============+
-| Data Visualization Assignment 1 | Make a good and bad visualization              | Sunday, September 15th, 23:59 | 15%         |
-|                                 |                                                |                               |             |
-|                                 | Copy this plot                                 |                               |             |
-+---------------------------------+------------------------------------------------+-------------------------------+-------------+
-| Data Visualization Assignment 2 | Make a visualization for your final assignment | Sunday, September 22nd, 23:59 | 15%         |
-|                                 |                                                |                               |             |
-|                                 | Copy this (or multiple) plots                  |                               |             |
-+---------------------------------+------------------------------------------------+-------------------------------+-------------+
-| Build a Shiny App               | Recreate a Shiny dashboard                     | Sunday, October 13th, 23:59   | 10%         |
-+---------------------------------+------------------------------------------------+-------------------------------+-------------+
-| Final assignment                | Make 3 visualizations of Prowise Learn data    |                               | 60%         |
-|                                 |                                                |                               |             |
-|                                 | Pitch to Prowise colleagues                    |                               |             |
-+---------------------------------+------------------------------------------------+-------------------------------+-------------+
++---------------------------------+------------------------------------------------+-------------------------------+--------------+
+| Assignment                      | Content                                        | Deadline                      | Grading      |
++=================================+================================================+===============================+==============+
+| Data Visualization Assignment 1 | Make a good and bad visualization              | Sunday, September 15th, 23:59 | 15%          |
+|                                 |                                                |                               |              |
+|                                 | Copy this plot                                 |                               |              |
++---------------------------------+------------------------------------------------+-------------------------------+--------------+
+| Data Visualization Assignment 2 | Make a visualization for your final assignment | Sunday, September 22nd, 23:59 | 15%          |
+|                                 |                                                |                               |              |
+|                                 | Copy this (or multiple) plots                  |                               |              |
++---------------------------------+------------------------------------------------+-------------------------------+--------------+
+| Build a Shiny App               | Recreate a Shiny dashboard                     | Sunday, October 13th, 23:59   | 10%          |
++---------------------------------+------------------------------------------------+-------------------------------+--------------+
+| Final assignment                | Make 3 visualizations of Prowise Learn data    |                               | 60%          |
+|                                 |                                                |                               |              |
+|                                 | Pitch to Prowise colleagues                    |                               |              |
++---------------------------------+------------------------------------------------+-------------------------------+--------------+
 
 Data visualization assignments make up a total of 20% of your final BDS Toolbox grade. ::: footer :::
 
@@ -241,7 +240,7 @@ We focus on explanatory data viz (also bridge to next). Beautiful plots!
 
 -   What elements can be improved?
 
--   Are there still good things with the plot? 
+-   Are there still good things with the plot?
 :::
 
 ::: {.column width="60%"}
@@ -304,17 +303,18 @@ Check out the classic from Darrel Huff [How to Lie with Statistics](https://www.
 :::
 :::
 
-:::footer
+::: footer
 :::
+
 ------------------------------------------------------------------------
 
 ### Data to ink ratio
 
 ![](images/treemap.png)
 
-
-:::footer
+::: footer
 :::
+
 ------------------------------------------------------------------------
 
 💬
@@ -672,43 +672,46 @@ RXKCD::getXKCD(which = "833")
 
 ## Today
 
-:::columns
-:::{.column width="50%"}
+::: columns
+::: {.column width="50%"}
 📊 More (your) good examples
 
-✨ More data visualization features 
+✨ More data visualization features
 
 📝 Introduction to final project
-
 :::
-:::{.column width="50%"}
- Work on:
- 
+
+::: {.column width="50%"}
+Work on:
+
 ✏️ Brainstorm ideas for final project
 
 ✏️ Data viz assignment 2
-
-:::
-:::
-
-## Recap
-
-:::columns
-:::{.column width="40%"}
-✓  Keep it simple.  
-
-✓  Don't mislead. 
-
-✓  Tell one story.  
-
-✓  **First impressions matter!**  
-:::
-:::{.column width="60%"}
-![](images/misleading.jpeg){fig-align="center"}
 :::
 :::
 
 :::footer
+:::
+
+## Recap
+
+::: columns
+::: {.column width="40%"}
+✓ Keep it simple.
+
+✓ Don't mislead.
+
+✓ Tell one story.
+
+✓ **First impressions matter!**
+:::
+
+::: {.column width="60%"}
+![](images/misleading.jpeg){fig-align="center"}
+:::
+:::
+
+::: footer
 :::
 
 ## Chart junk?
@@ -717,12 +720,13 @@ RXKCD::getXKCD(which = "833")
 ::: {.column width="60%"}
 ![NYT](images/chart_junk.png)
 :::
+
 ::: {.column width="40%"}
 ![Claus Wilke](images/chart_junk2.png)
 :::
 :::
 
-:::footer
+::: footer
 :::
 
 ## Themes
@@ -788,7 +792,8 @@ pizza_season %>%
 :::
 
 ::: footer
-Slide borrowed from Alexander Savi (2021)
+Slide borrowed from [Alexander Savi (2022)](https://www.alexandersavi.nl/assets/lectures/2022_bds_toolbox/bds_toolbox_dataviz.html#/section) 
+
 Packages: [cowplot](https://wilkelab.org/cowplot/articles/introduction.html), [firatheme](https://github.com/vankesteren/firatheme), [hrbrthemes](https://cinc.rud.is/web/packages/hrbrthemes/) (typography-centric themes), [ggthemes](https://jrnold.github.io/ggthemes/) (collection),<br>and [xkcd](https://r-forge.r-project.org/projects/xkcd/) (dormant), [ggpomological](https://www.garrickadenbuie.com/project/ggpomological/), [tvthemes](https://ryo-n7.github.io/tvthemes/), [wesanderson](https://github.com/karthik/wesanderson) (color palettes).
 :::
 
@@ -818,7 +823,7 @@ fig_season_2 +
 :::
 
 ::: footer
-Slide borrowed from Alexander Savi (2021)
+Slide borrowed from [Alexander Savi (2022)](https://www.alexandersavi.nl/assets/lectures/2022_bds_toolbox/bds_toolbox_dataviz.html#/section)
 
 Functions: [viridis](https://ggplot2.tidyverse.org/reference/scale_viridis.html) (optimized for continuous data), [colorbrewer](https://ggplot2.tidyverse.org/reference/scale_brewer.html) (optimized for discrete data, includes sequential, diverging, and qualitative color scales).
 
@@ -827,7 +832,6 @@ Resources: [viridis Color Maps for R](https://sjmgarnier.github.io/viridis/), [C
 
 ::: notes
 :::
-
 
 ## Color blindness {.smaller .scrollable}
 
@@ -842,7 +846,6 @@ colorblindr::cvd_grid(fig_season_2)
 ```
 
 ![[Claus Wilke](https://clauswilke.com/dataviz/color-pitfalls.html#not-designing-for-color-vision-deficiency)](images/colorblindness.png)
-
 :::
 
 ::: {.column width="50%"}
@@ -857,7 +860,7 @@ fig_season_2 + ggplot2::scale_fill_manual(values = MetBrewer::met.brewer("VanGog
 :::
 
 ::: footer
-Slide borrowed from Alexander Savi (2021)
+Slide borrowed from [Alexander Savi (2022)](https://www.alexandersavi.nl/assets/lectures/2022_bds_toolbox/bds_toolbox_dataviz.html#/section)
 
 Packages: [khroma](https://packages.tesselle.org/khroma/) (discrete data), [viridis](https://sjmgarnier.github.io/viridis/) (continuous data), [MetBrewer](https://github.com/BlakeRMills/MetBrewer) & [rijkspalette](https://vankesteren.github.io/rijkspalette/), [colorblindr](https://github.com/clauswilke/colorblindr), [colorspace](https://colorspace.r-forge.r-project.org/articles/ggplot2_color_scales.html).
 
@@ -866,7 +869,6 @@ Resources: [clauswilke.com](https://clauswilke.com/dataviz/color-pitfalls.html){
 
 ::: notes
 :::
-
 
 ## Color accuracy {.smaller}
 
@@ -887,13 +889,12 @@ Print-proof, [monitor/beamer-proof](https://www.benq.com/en-us/knowledge-center/
 :::
 
 ::: footer
-Slide borrowed from Alexander Savi (2021)
+Slide borrowed from [Alexander Savi (2022)](https://www.alexandersavi.nl/assets/lectures/2022_bds_toolbox/bds_toolbox_dataviz.html#/section)
 
 Resources: [viridis Color Maps for R](https://sjmgarnier.github.io/viridis/).
 :::
 
 ## Captions {.smaller}
-
 
 ::: columns
 ::: {.column width="50%"}
@@ -914,7 +915,7 @@ Resources: [viridis Color Maps for R](https://sjmgarnier.github.io/viridis/).
 :::
 
 ::: footer
-Slides borrowed from Alexander Savi (2021)
+Slides borrowed from [Alexander Savi (2022)](https://www.alexandersavi.nl/assets/lectures/2022_bds_toolbox/bds_toolbox_dataviz.html#/section)
 
 Resources: [clauswilke.com](https://clauswilke.com/dataviz/figure-titles-captions.html), [more](https://www.internationalscienceediting.com/how-to-write-a-figure-caption/), [more](https://www.aje.com/arc/writing-effective-figure-legend/), [more](https://blog.bioturing.com/2018/05/10/how-to-craft-a-figure-legend-for-scientific-papers/).
 :::
@@ -951,7 +952,7 @@ fig_season_2 +
 :::
 
 ::: footer
-Slides borrowed from Alexander Savi (2021)
+Slides borrowed from [Alexander Savi (2022)](https://www.alexandersavi.nl/assets/lectures/2022_bds_toolbox/bds_toolbox_dataviz.html#/section)
 
 Packages: [showtext](https://github.com/yixuan/showtext).
 :::
@@ -983,7 +984,7 @@ ggplot2::ggsave("awesome_plot.png",
 :::
 
 ::: footer
-Slides borrowed from Alexander Savi (2021)
+Slides borrowed from [Alexander Savi (2022)](https://www.alexandersavi.nl/assets/lectures/2022_bds_toolbox/bds_toolbox_dataviz.html#/section)
 
 Enlarge bitmap [with AI](https://letsenhance.io/) (paid). Yes, you can save to [.tex](https://daqana.github.io/tikzDevice/).
 :::
@@ -998,7 +999,8 @@ Vector images pick the closest font available (if the actual font is not availab
 Adobe Acrobat (paid version) can be used to [manually embed fonts in a PDF](https://www.adobe.com/uk/acrobat/resources/embed-fonts-in-pdf.html).
 
 ::: footer
-Slides borrowed from Alexander Savi (2021)
+Slides borrowed from Alexander Savi (2021) 
+
 Packages: [showtext](https://github.com/yixuan/showtext), [extrafont](https://github.com/wch/extrafont).
 
 Should [color profiles also be embedded](https://www.color.org/profile_embedding.xalter)? Not sure, and not clear how R/ggplot2 handles this.
@@ -1053,13 +1055,12 @@ Explorable explanations: [Nicky Case](https://ncase.me/), [Setosa](https://setos
 :::
 
 ::: {.column width="50%"}
-![Thomas Lin Pedersen](https://thomaslinpedersen.art/work/becoming/)(images/becoming_2.jpg){fig-align="left"}
+![[Thomas Lin Pedersen](https://thomaslinpedersen.art/work/becoming/)](images/becoming_2.jpg){fig-align="left" height="500"}
 :::
 :::
 
-:::footer
+::: footer
 :::
-
 
 ## Interactive viz {.smaller}
 
@@ -1105,11 +1106,32 @@ output$distPlot <- renderPlot({
 ::: footer
 :::
 
+## Break
+
+```{r}
+#| echo: true
+#| results: false
+library("RXKCD")
+RXKCD::getXKCD(which = "2476")
+```
+
+::: footer
+:::
 
 # Best plots 🥇 {background-color="#8000FF"}
 
 ## ... that's up to you! 🫵
 
 ## Final assignment
+
+## Project 1
+
+## Project 2
+
+## Project 3
+
+## Project 4
+
+## Project 5 
 
 Information about final project

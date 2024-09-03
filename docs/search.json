@@ -137,56 +137,56 @@
     "href": "index.html#themes",
     "title": "Data Visualization",
     "section": "Themes",
-    "text": "Themes\n\n\n\n\nCode\nlibrary(\"cowplot\")\nfig_season_1 +\n  cowplot::theme_cowplot()\n\n\n\n\n\n\n\n\n\n\n\n\nCode\n# download.file(\"https://github.com/ipython/xkcd-font/raw/master/xkcd-script/font/xkcd-script.ttf\", destfile = \"xkcd-script.ttf\")  # download xkcd Script font\n# system(\"open xkcd-script.ttf\", wait = FALSE)  # open and install xkcd Script font on MacOS\n# download.file(\"http://simonsoftware.se/other/xkcd.ttf\", destfile = \"xkcd.ttf\")  # download xkcd font\n# system(\"open xkcd.ttf\", wait = FALSE)  # open and install xkcd font on MacOS\nlibrary(\"showtext\")\nlibrary(\"xkcd\")\n#sysfonts::font_add(family = \"xkcd Script\", regular = \"xkcd-script.ttf\")\nshowtext::showtext_auto()\nxrange &lt;- range(as.numeric(pizza_season$month))\nyrange &lt;- range(pizza_season$n)\nratioxy &lt;- diff(xrange) / diff(yrange)\nx &lt;- 3\ny &lt;- 1180\nscale &lt;- 60\nn &lt;- 1\nmapman &lt;- ggplot2::aes(x, y, scale, ratioxy, angleofspine, anglerighthumerus, anglelefthumerus,\n              anglerightradius, angleleftradius, anglerightleg, angleleftleg, angleofneck)\ndataman &lt;- tibble::tibble(x = x, y = y,\n                          scale = scale,\n                          ratioxy = ratioxy,\n                          angleofspine = runif(n, -pi/2-pi/10, -pi/2+pi/10),\n                          anglerighthumerus = runif(n, -pi/6-pi/10, -pi/6+pi/10),\n                          anglelefthumerus = runif(n, pi+pi/6-pi/10, pi+pi/6+pi/10),\n                          anglerightradius =  runif(n, -pi/4, pi/4),\n                          angleleftradius =  runif(n, pi-pi/4, pi+pi/4),\n                          anglerightleg = runif(n, 3*pi/2+pi/12, 3*pi/2+pi/12+pi/10),\n                          angleleftleg = runif(n, 3*pi/2-pi/12-pi/10, 3*pi/2-pi/12),\n                          angleofneck = runif(n, -pi/2-pi/10, -pi/2+pi/10))\ndatatalk &lt;- tibble::tibble(xbegin = 4, ybegin = 1185, xend = 5, yend = 1215)\npizza_season %&gt;%\n  ggplot2::ggplot() +\n  ggplot2::geom_smooth(aes(x = month, y = n, group = type, linetype = type),\n                       color = \"black\", se = FALSE) +\n  ggplot2::labs(title = \"Pizza Season\", subtitle = \"2015\") +\n  ggplot2::theme_minimal() +\n  ggplot2::theme(text = element_text(family = \"xkcd Script\", size = 30)) +\n  ggplot2::annotate(\"text\", x = 6.5, y = 1215, label = \"The figures don't go\\noff the charts, so\\nwhat's the plot of this graph?\", family=\"xkcd Script\") +\n  xkcd::xkcdaxis(xrange, yrange) +\n  xkcd::xkcdman(mapman, dataman) +\n  xkcd::xkcdline(aes(x = xbegin, y = ybegin, xend = xend, yend = yend),\n           datatalk, xjitteramount = 0.4)\n\n\n\n\nSlide borrowed from Alexander Savi (2021) Packages: cowplot, firatheme, hrbrthemes (typography-centric themes), ggthemes (collection),and xkcd (dormant), ggpomological, tvthemes, wesanderson (color palettes)."
+    "text": "Themes\n\n\n\n\nCode\nlibrary(\"cowplot\")\nfig_season_1 +\n  cowplot::theme_cowplot()\n\n\n\n\n\n\n\n\n\n\n\n\nCode\n# download.file(\"https://github.com/ipython/xkcd-font/raw/master/xkcd-script/font/xkcd-script.ttf\", destfile = \"xkcd-script.ttf\")  # download xkcd Script font\n# system(\"open xkcd-script.ttf\", wait = FALSE)  # open and install xkcd Script font on MacOS\n# download.file(\"http://simonsoftware.se/other/xkcd.ttf\", destfile = \"xkcd.ttf\")  # download xkcd font\n# system(\"open xkcd.ttf\", wait = FALSE)  # open and install xkcd font on MacOS\nlibrary(\"showtext\")\nlibrary(\"xkcd\")\n#sysfonts::font_add(family = \"xkcd Script\", regular = \"xkcd-script.ttf\")\nshowtext::showtext_auto()\nxrange &lt;- range(as.numeric(pizza_season$month))\nyrange &lt;- range(pizza_season$n)\nratioxy &lt;- diff(xrange) / diff(yrange)\nx &lt;- 3\ny &lt;- 1180\nscale &lt;- 60\nn &lt;- 1\nmapman &lt;- ggplot2::aes(x, y, scale, ratioxy, angleofspine, anglerighthumerus, anglelefthumerus,\n              anglerightradius, angleleftradius, anglerightleg, angleleftleg, angleofneck)\ndataman &lt;- tibble::tibble(x = x, y = y,\n                          scale = scale,\n                          ratioxy = ratioxy,\n                          angleofspine = runif(n, -pi/2-pi/10, -pi/2+pi/10),\n                          anglerighthumerus = runif(n, -pi/6-pi/10, -pi/6+pi/10),\n                          anglelefthumerus = runif(n, pi+pi/6-pi/10, pi+pi/6+pi/10),\n                          anglerightradius =  runif(n, -pi/4, pi/4),\n                          angleleftradius =  runif(n, pi-pi/4, pi+pi/4),\n                          anglerightleg = runif(n, 3*pi/2+pi/12, 3*pi/2+pi/12+pi/10),\n                          angleleftleg = runif(n, 3*pi/2-pi/12-pi/10, 3*pi/2-pi/12),\n                          angleofneck = runif(n, -pi/2-pi/10, -pi/2+pi/10))\ndatatalk &lt;- tibble::tibble(xbegin = 4, ybegin = 1185, xend = 5, yend = 1215)\npizza_season %&gt;%\n  ggplot2::ggplot() +\n  ggplot2::geom_smooth(aes(x = month, y = n, group = type, linetype = type),\n                       color = \"black\", se = FALSE) +\n  ggplot2::labs(title = \"Pizza Season\", subtitle = \"2015\") +\n  ggplot2::theme_minimal() +\n  ggplot2::theme(text = element_text(family = \"xkcd Script\", size = 30)) +\n  ggplot2::annotate(\"text\", x = 6.5, y = 1215, label = \"The figures don't go\\noff the charts, so\\nwhat's the plot of this graph?\", family=\"xkcd Script\") +\n  xkcd::xkcdaxis(xrange, yrange) +\n  xkcd::xkcdman(mapman, dataman) +\n  xkcd::xkcdline(aes(x = xbegin, y = ybegin, xend = xend, yend = yend),\n           datatalk, xjitteramount = 0.4)\n\n\n\n\nSlide borrowed from Alexander Savi (2022)\nPackages: cowplot, firatheme, hrbrthemes (typography-centric themes), ggthemes (collection),and xkcd (dormant), ggpomological, tvthemes, wesanderson (color palettes)."
   },
   {
     "objectID": "index.html#colors",
     "href": "index.html#colors",
     "title": "Data Visualization",
     "section": "Colors",
-    "text": "Colors\n\n\n\n\nCode\nfig_season_2 +\n  ggplot2::scale_fill_viridis_d()\n\n\n\n\n\n\n\n\n\n\n\n\nCode\nfig_season_2 +\n  ggplot2::scale_fill_brewer(type = \"qual\")\n\n\n\n\n\n\n\n\n\n\n\nSlide borrowed from Alexander Savi (2021)\nFunctions: viridis (optimized for continuous data), colorbrewer (optimized for discrete data, includes sequential, diverging, and qualitative color scales).\nResources: viridis Color Maps for R, ColorBrewer 2.0."
+    "text": "Colors\n\n\n\n\nCode\nfig_season_2 +\n  ggplot2::scale_fill_viridis_d()\n\n\n\n\n\n\n\n\n\n\n\n\nCode\nfig_season_2 +\n  ggplot2::scale_fill_brewer(type = \"qual\")\n\n\n\n\n\n\n\n\n\n\n\nSlide borrowed from Alexander Savi (2022)\nFunctions: viridis (optimized for continuous data), colorbrewer (optimized for discrete data, includes sequential, diverging, and qualitative color scales).\nResources: viridis Color Maps for R, ColorBrewer 2.0."
   },
   {
     "objectID": "index.html#color-blindness",
     "href": "index.html#color-blindness",
     "title": "Data Visualization",
     "section": "Color blindness",
-    "text": "Color blindness\n\n\n\n\nCode\n# remotes::install_github(\"clauswilke/colorblindr\")\nlibrary(\"colorblindr\")\ncolorblindr::cvd_grid(fig_season_2)\n\n\n\n\n\n\n\n\n\n\n\n\nClaus Wilke\n\n\n\n\n\nCode\nlibrary(\"MetBrewer\")\nMetBrewer::colorblind_palettes\n\n\n [1] \"Archambault\" \"Cassatt1\"    \"Cassatt2\"    \"Demuth\"      \"Derain\"     \n [6] \"Egypt\"       \"Greek\"       \"Hiroshige\"   \"Hokusai2\"    \"Hokusai3\"   \n[11] \"Ingres\"      \"Isfahan1\"    \"Isfahan2\"    \"Java\"        \"Johnson\"    \n[16] \"Kandinsky\"   \"Morgenstern\" \"OKeeffe1\"    \"OKeeffe2\"    \"Pillement\"  \n[21] \"Tam\"         \"Troy\"        \"VanGogh3\"    \"Veronese\"   \n\n\nCode\nfig_season_2 + ggplot2::scale_fill_manual(values = MetBrewer::met.brewer(\"VanGogh3\", n = 4))\n\n\n\n\n\n\n\n\n\n\n\nSlide borrowed from Alexander Savi (2021)\nPackages: khroma (discrete data), viridis (continuous data), MetBrewer & rijkspalette, colorblindr, colorspace.\nResources: clauswilke.com, hclwizard.org."
+    "text": "Color blindness\n\n\n\n\nCode\n# remotes::install_github(\"clauswilke/colorblindr\")\nlibrary(\"colorblindr\")\ncolorblindr::cvd_grid(fig_season_2)\n\n\n\n\n\n\n\n\n\n\n\n\nClaus Wilke\n\n\n\n\n\nCode\nlibrary(\"MetBrewer\")\nMetBrewer::colorblind_palettes\n\n\n [1] \"Archambault\" \"Cassatt1\"    \"Cassatt2\"    \"Demuth\"      \"Derain\"     \n [6] \"Egypt\"       \"Greek\"       \"Hiroshige\"   \"Hokusai2\"    \"Hokusai3\"   \n[11] \"Ingres\"      \"Isfahan1\"    \"Isfahan2\"    \"Java\"        \"Johnson\"    \n[16] \"Kandinsky\"   \"Morgenstern\" \"OKeeffe1\"    \"OKeeffe2\"    \"Pillement\"  \n[21] \"Tam\"         \"Troy\"        \"VanGogh3\"    \"Veronese\"   \n\n\nCode\nfig_season_2 + ggplot2::scale_fill_manual(values = MetBrewer::met.brewer(\"VanGogh3\", n = 4))\n\n\n\n\n\n\n\n\n\n\n\nSlide borrowed from Alexander Savi (2022)\nPackages: khroma (discrete data), viridis (continuous data), MetBrewer & rijkspalette, colorblindr, colorspace.\nResources: clauswilke.com, hclwizard.org."
   },
   {
     "objectID": "index.html#color-accuracy",
     "href": "index.html#color-accuracy",
     "title": "Data Visualization",
     "section": "Color accuracy",
-    "text": "Color accuracy\n\n\nPrint-proof, monitor/beamer-proof, colorblind-proof?\n\nUse grayscale (but color-coding is superior)\nUse a secondary aesthetic for color\nUse a viridis color map\n\n\n\n\nSource: benq.com\n\n\n\n\n\n\nSource: Savi et al. (2018)\n\n\n\n\nSlide borrowed from Alexander Savi (2021)\nResources: viridis Color Maps for R."
+    "text": "Color accuracy\n\n\nPrint-proof, monitor/beamer-proof, colorblind-proof?\n\nUse grayscale (but color-coding is superior)\nUse a secondary aesthetic for color\nUse a viridis color map\n\n\n\n\nSource: benq.com\n\n\n\n\n\n\nSource: Savi et al. (2018)\n\n\n\n\nSlide borrowed from Alexander Savi (2022)\nResources: viridis Color Maps for R."
   },
   {
     "objectID": "index.html#captions",
     "href": "index.html#captions",
     "title": "Data Visualization",
     "section": "Captions",
-    "text": "Captions\n\n\nTitle Descriptive or declarative\nMethods Keep it brief\nResults If not (fully captured) in title\nDefinitions Colors, line types, error bars, etc.\nData source If external\n\n\n\n\nSource: sketch.es\n\n\n\n\nSlides borrowed from Alexander Savi (2021)\nResources: clauswilke.com, more, more, more."
+    "text": "Captions\n\n\nTitle Descriptive or declarative\nMethods Keep it brief\nResults If not (fully captured) in title\nDefinitions Colors, line types, error bars, etc.\nData source If external\n\n\n\n\nSource: sketch.es\n\n\n\n\nSlides borrowed from Alexander Savi (2022)\nResources: clauswilke.com, more, more, more."
   },
   {
     "objectID": "index.html#typography",
     "href": "index.html#typography",
     "title": "Data Visualization",
     "section": "Typography",
-    "text": "Typography\n\n\nLearn everything about typography.\nFind inspiration and recommendations.\nChoose a font for data visualizations.\nPick good font combinations.\nOr just use arial or helvetica.\n\n\n\nCode\nlibrary(\"showtext\")\nsysfonts::font_add_google(\"Press Start 2P\", \"2P\")\nshowtext::showtext_auto()\nfig_season_2 +\n  ggplot2::theme(text = element_text(family = \"2P\", size = 20))\n\n\n\n\n\n\n\n\n\n\n\nSlides borrowed from Alexander Savi (2021)\nPackages: showtext."
+    "text": "Typography\n\n\nLearn everything about typography.\nFind inspiration and recommendations.\nChoose a font for data visualizations.\nPick good font combinations.\nOr just use arial or helvetica.\n\n\n\nCode\nlibrary(\"showtext\")\nsysfonts::font_add_google(\"Press Start 2P\", \"2P\")\nshowtext::showtext_auto()\nfig_season_2 +\n  ggplot2::theme(text = element_text(family = \"2P\", size = 20))\n\n\n\n\n\n\n\n\n\n\n\nSlides borrowed from Alexander Savi (2022)\nPackages: showtext."
   },
   {
     "objectID": "index.html#file-formatsize",
     "href": "index.html#file-formatsize",
     "title": "Data Visualization",
     "section": "File format/size",
-    "text": "File format/size\n\n\n\nFile size: email attachment, webpage/image load time, compilation time\nFile format: resizing vector vs. bitmap/raster. For bitmap images, set the plot resolution: dpi = c(“retina”, “print”, “screen”)\n\n\nggplot2::ggsave(\"awesome_plot.png\",\n                width = 5,\n                height = 5,\n                units = \"cm\",\n                dpi = \"retina\")\n\n\n\n\n\nSource: clauswilke.com\n\n\n\n\nSlides borrowed from Alexander Savi (2021)\nEnlarge bitmap with AI (paid). Yes, you can save to .tex."
+    "text": "File format/size\n\n\n\nFile size: email attachment, webpage/image load time, compilation time\nFile format: resizing vector vs. bitmap/raster. For bitmap images, set the plot resolution: dpi = c(“retina”, “print”, “screen”)\n\n\nggplot2::ggsave(\"awesome_plot.png\",\n                width = 5,\n                height = 5,\n                units = \"cm\",\n                dpi = \"retina\")\n\n\n\n\n\nSource: clauswilke.com\n\n\n\n\nSlides borrowed from Alexander Savi (2022)\nEnlarge bitmap with AI (paid). Yes, you can save to .tex."
   },
   {
     "objectID": "index.html#font-embedding",
     "href": "index.html#font-embedding",
     "title": "Data Visualization",
     "section": "Font embedding",
-    "text": "Font embedding\nVector images pick the closest font available (if the actual font is not available on the recipients computer). You can embed fonts into the vector image.\n\nshowtext converts characters into polygons. Embedding is no longer required, but text is no longer searchable.\nextrafont supports font embedding, but supports fewer fonts.\n\nAdobe Acrobat (paid version) can be used to manually embed fonts in a PDF.\n\nSlides borrowed from Alexander Savi (2021) Packages: showtext, extrafont.\nShould color profiles also be embedded? Not sure, and not clear how R/ggplot2 handles this."
+    "text": "Font embedding\nVector images pick the closest font available (if the actual font is not available on the recipients computer). You can embed fonts into the vector image.\n\nshowtext converts characters into polygons. Embedding is no longer required, but text is no longer searchable.\nextrafont supports font embedding, but supports fewer fonts.\n\nAdobe Acrobat (paid version) can be used to manually embed fonts in a PDF.\n\nSlides borrowed from Alexander Savi (2021)\nPackages: showtext, extrafont.\nShould color profiles also be embedded? Not sure, and not clear how R/ggplot2 handles this."
   },
   {
     "objectID": "index.html#continue-learning",
@@ -200,7 +200,7 @@
     "href": "index.html#get-inspiration",
     "title": "Data Visualization",
     "section": "Get inspiration",
-    "text": "Get inspiration\n\n\nPodcasts: Data Stories, Explore Explain, Data Viz Today\nBlogs: FlowingData\nJournals: Nightingale\nComics: Matt-Heun Hong, Martin Telefont, Natalia Kiseleva\nGenerative art: Clause O. Wilke, Danielle Navarro, Thomas Lin Pedersen\nAwards: Information is Beautiful\nInteractive visualizations: R Psychologist\nExplorable explanations: Nicky Case, Setosa\n\n(images/becoming_2.jpg){fig-align=“left”}"
+    "text": "Get inspiration\n\n\nPodcasts: Data Stories, Explore Explain, Data Viz Today\nBlogs: FlowingData\nJournals: Nightingale\nComics: Matt-Heun Hong, Martin Telefont, Natalia Kiseleva\nGenerative art: Clause O. Wilke, Danielle Navarro, Thomas Lin Pedersen\nAwards: Information is Beautiful\nInteractive visualizations: R Psychologist\nExplorable explanations: Nicky Case, Setosa\n\n\n\n\nThomas Lin Pedersen"
   },
   {
     "objectID": "index.html#interactive-viz",
@@ -208,6 +208,13 @@
     "title": "Data Visualization",
     "section": "Interactive viz",
     "text": "Interactive viz\n\n\n\nsliderInput(\"bins\", \"Number of bins:\", \n            min = 1, max = 50, value = 30)\nplotOutput(\"distPlot\")\n\n\noutput$distPlot &lt;- renderPlot({\n  x &lt;- faithful[, 2]  # Old Faithful Geyser data\n  bins &lt;- seq(min(x), max(x), length.out = input$bins + 1)\n  hist(x, breaks = bins, col = 'darkgray', border = 'white')\n})\n\n\n\n\nShiny\n\n\n\nshiny builds interactive web apps\nggplotly converts ggplot2 figures into interactive figures\ngganimate includes animated elements to ggplot2 figures\nhtmlwidgets creates JavaScript visualization widgets\nflexdashboard creates interactive dashboards\nggvis (dormant)"
+  },
+  {
+    "objectID": "index.html#break-1",
+    "href": "index.html#break-1",
+    "title": "Data Visualization",
+    "section": "Break",
+    "text": "Break\n\nlibrary(\"RXKCD\")\nRXKCD::getXKCD(which = \"2476\")"
   },
   {
     "objectID": "index.html#thats-up-to-you",
@@ -221,6 +228,41 @@
     "href": "index.html#final-assignment",
     "title": "Data Visualization",
     "section": "Final assignment",
-    "text": "Final assignment\nInformation about final project\n\n\n\n\nCover photo made in R by Danielle Navarro"
+    "text": "Final assignment"
+  },
+  {
+    "objectID": "index.html#project-1",
+    "href": "index.html#project-1",
+    "title": "Data Visualization",
+    "section": "Project 1",
+    "text": "Project 1"
+  },
+  {
+    "objectID": "index.html#project-2",
+    "href": "index.html#project-2",
+    "title": "Data Visualization",
+    "section": "Project 2",
+    "text": "Project 2"
+  },
+  {
+    "objectID": "index.html#project-3",
+    "href": "index.html#project-3",
+    "title": "Data Visualization",
+    "section": "Project 3",
+    "text": "Project 3"
+  },
+  {
+    "objectID": "index.html#project-4",
+    "href": "index.html#project-4",
+    "title": "Data Visualization",
+    "section": "Project 4",
+    "text": "Project 4"
+  },
+  {
+    "objectID": "index.html#project-5",
+    "href": "index.html#project-5",
+    "title": "Data Visualization",
+    "section": "Project 5",
+    "text": "Project 5\nInformation about final project\n\n\n\n\nCover photo made in R by Danielle Navarro"
   }
 ]
