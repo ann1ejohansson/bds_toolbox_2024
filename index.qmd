@@ -686,7 +686,7 @@ RXKCD::getXKCD(which = "833")
  
 ✏️ Brainstorm ideas for final project
 
-✏️ Data vis assignment 2
+✏️ Data viz assignment 2
 
 :::
 :::
@@ -720,6 +720,9 @@ RXKCD::getXKCD(which = "833")
 ::: {.column width="40%"}
 ![Claus Wilke](images/chart_junk2.png)
 :::
+:::
+
+:::footer
 :::
 
 ## Themes
@@ -1050,7 +1053,7 @@ Explorable explanations: [Nicky Case](https://ncase.me/), [Setosa](https://setos
 :::
 
 ::: {.column width="50%"}
-![Thomas Lin Pedersen](https://thomaslinpedersen.art/work/becoming/)](images/becoming_2.jpg){fig-align="left"}
+![Thomas Lin Pedersen](https://thomaslinpedersen.art/work/becoming/)(images/becoming_2.jpg){fig-align="left"}
 :::
 :::
 
