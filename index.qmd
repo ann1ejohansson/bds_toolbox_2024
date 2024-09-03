@@ -6,7 +6,7 @@ footer: "<span style='color: white;'>Cover photo made in R by <a href='https://a
 format: 
   revealjs:
     theme: "white"
-    logo: images/uva_logo_white_screencapture.png
+    logo: images/uva_logo.png
     css: styles.css
     smaller: true
 editor: visual
@@ -230,7 +230,7 @@ We focus on explanatory data viz (also bridge to next). Beautiful plots!
 :::
 :::
 
-## Speed dates 🍷
+## Speed dates 💬
 
 ::: footer
 :::
@@ -241,7 +241,7 @@ We focus on explanatory data viz (also bridge to next). Beautiful plots!
 
 -   What elements can be improved?
 
--   Are there still good things with the plot?
+-   Are there still good things with the plot? 
 :::
 
 ::: {.column width="60%"}
@@ -251,7 +251,7 @@ We focus on explanatory data viz (also bridge to next). Beautiful plots!
 
 ------------------------------------------------------------------------
 
-🍷
+💬
 
 ::: columns
 ::: {.column width="60%"}
@@ -272,7 +272,7 @@ Check out the classic from Darrel Huff [How to Lie with Statistics](https://www.
 
 ------------------------------------------------------------------------
 
-🍷
+💬
 
 ::: columns
 ::: {.column width="60%"}
@@ -300,13 +300,24 @@ Check out the classic from Darrel Huff [How to Lie with Statistics](https://www.
 :::
 
 ::: {.column width="50%"}
-![](images/data_ink2.jpeg)
+![](images/data_ink2.jpeg){height="500"}
 :::
 :::
 
+:::footer
+:::
 ------------------------------------------------------------------------
 
-🍷
+### Data to ink ratio
+
+![](images/treemap.png)
+
+
+:::footer
+:::
+------------------------------------------------------------------------
+
+💬
 
 ::: columns
 ::: {.column width="60%"}
@@ -325,7 +336,7 @@ Check out the classic from Darrel Huff [How to Lie with Statistics](https://www.
 
 ------------------------------------------------------------------------
 
-🍷
+💬
 
 ::: columns
 ::: {.column width="60%"}
@@ -344,7 +355,7 @@ Check out the classic from Darrel Huff [How to Lie with Statistics](https://www.
 
 ------------------------------------------------------------------------
 
-🍷
+💬
 
 ::: columns
 ::: {.column width="60%"}
@@ -380,7 +391,7 @@ Check out the classic from Darrel Huff [How to Lie with Statistics](https://www.
 
 ------------------------------------------------------------------------
 
-🍷
+💬
 
 ::: columns
 ::: {.column width="60%"}
@@ -416,7 +427,7 @@ Check out the classic from Darrel Huff [How to Lie with Statistics](https://www.
 
 ------------------------------------------------------------------------
 
-🍷
+💬
 
 ![](images/pie1.png)
 
@@ -455,7 +466,7 @@ Check out the classic from Darrel Huff [How to Lie with Statistics](https://www.
 
 ------------------------------------------------------------------------
 
-🍷
+💬
 
 ::: columns
 ::: {.column width="60%"}
@@ -661,19 +672,436 @@ RXKCD::getXKCD(which = "833")
 
 ## Today
 
-More good examples
+:::columns
+:::{.column width="50%"}
+📊 More (your) good examples
 
-More data visualization features
+✨ More data visualization features 
 
-Introduce final project
+📝 Introduction to final project
 
-Make groups
+:::
+:::{.column width="50%"}
+ Work on:
+ 
+✏️ Brainstorm ideas for final project
 
-Work on:
+✏️ Data vis assignment 2
 
--   Brainstorm ideas for final project
+:::
+:::
 
--   Data vis assignment 2
+## Recap
+
+:::columns
+:::{.column width="40%"}
+✓  Keep it simple.  
+
+✓  Don't mislead. 
+
+✓  Tell one story.  
+
+✓  **First impressions matter!**  
+:::
+:::{.column width="60%"}
+![](images/misleading.jpeg){fig-align="center"}
+:::
+:::
+
+:::footer
+:::
+
+## Chart junk?
+
+::: columns
+::: {.column width="60%"}
+![NYT](images/chart_junk.png)
+:::
+::: {.column width="40%"}
+![Claus Wilke](images/chart_junk2.png)
+:::
+:::
+
+## Themes
+
+::: columns
+::: {.column width="50%"}
+```{r}
+#| echo: true
+#| code-fold: true
+library("cowplot")
+fig_season_1 +
+  cowplot::theme_cowplot()
+```
+:::
+
+::: {.column width="50%"}
+```{r, eval=FALSE}
+#| echo: true
+#| code-fold: true
+# download.file("https://github.com/ipython/xkcd-font/raw/master/xkcd-script/font/xkcd-script.ttf", destfile = "xkcd-script.ttf")  # download xkcd Script font
+# system("open xkcd-script.ttf", wait = FALSE)  # open and install xkcd Script font on MacOS
+# download.file("http://simonsoftware.se/other/xkcd.ttf", destfile = "xkcd.ttf")  # download xkcd font
+# system("open xkcd.ttf", wait = FALSE)  # open and install xkcd font on MacOS
+library("showtext")
+library("xkcd")
+#sysfonts::font_add(family = "xkcd Script", regular = "xkcd-script.ttf")
+showtext::showtext_auto()
+xrange <- range(as.numeric(pizza_season$month))
+yrange <- range(pizza_season$n)
+ratioxy <- diff(xrange) / diff(yrange)
+x <- 3
+y <- 1180
+scale <- 60
+n <- 1
+mapman <- ggplot2::aes(x, y, scale, ratioxy, angleofspine, anglerighthumerus, anglelefthumerus,
+              anglerightradius, angleleftradius, anglerightleg, angleleftleg, angleofneck)
+dataman <- tibble::tibble(x = x, y = y,
+                          scale = scale,
+                          ratioxy = ratioxy,
+                          angleofspine = runif(n, -pi/2-pi/10, -pi/2+pi/10),
+                          anglerighthumerus = runif(n, -pi/6-pi/10, -pi/6+pi/10),
+                          anglelefthumerus = runif(n, pi+pi/6-pi/10, pi+pi/6+pi/10),
+                          anglerightradius =  runif(n, -pi/4, pi/4),
+                          angleleftradius =  runif(n, pi-pi/4, pi+pi/4),
+                          anglerightleg = runif(n, 3*pi/2+pi/12, 3*pi/2+pi/12+pi/10),
+                          angleleftleg = runif(n, 3*pi/2-pi/12-pi/10, 3*pi/2-pi/12),
+                          angleofneck = runif(n, -pi/2-pi/10, -pi/2+pi/10))
+datatalk <- tibble::tibble(xbegin = 4, ybegin = 1185, xend = 5, yend = 1215)
+pizza_season %>%
+  ggplot2::ggplot() +
+  ggplot2::geom_smooth(aes(x = month, y = n, group = type, linetype = type),
+                       color = "black", se = FALSE) +
+  ggplot2::labs(title = "Pizza Season", subtitle = "2015") +
+  ggplot2::theme_minimal() +
+  ggplot2::theme(text = element_text(family = "xkcd Script", size = 30)) +
+  ggplot2::annotate("text", x = 6.5, y = 1215, label = "The figures don't go\noff the charts, so\nwhat's the plot of this graph?", family="xkcd Script") +
+  xkcd::xkcdaxis(xrange, yrange) +
+  xkcd::xkcdman(mapman, dataman) +
+  xkcd::xkcdline(aes(x = xbegin, y = ybegin, xend = xend, yend = yend),
+           datatalk, xjitteramount = 0.4)
+```
+:::
+:::
+
+::: footer
+Slide borrowed from Alexander Savi (2021)
+Packages: [cowplot](https://wilkelab.org/cowplot/articles/introduction.html), [firatheme](https://github.com/vankesteren/firatheme), [hrbrthemes](https://cinc.rud.is/web/packages/hrbrthemes/) (typography-centric themes), [ggthemes](https://jrnold.github.io/ggthemes/) (collection),<br>and [xkcd](https://r-forge.r-project.org/projects/xkcd/) (dormant), [ggpomological](https://www.garrickadenbuie.com/project/ggpomological/), [tvthemes](https://ryo-n7.github.io/tvthemes/), [wesanderson](https://github.com/karthik/wesanderson) (color palettes).
+:::
+
+::: notes
+:::
+
+## Colors
+
+::: columns
+::: {.column width="40%"}
+```{r}
+#| echo: true
+#| code-fold: true
+fig_season_2 +
+  ggplot2::scale_fill_viridis_d()
+```
+:::
+
+::: {.column width="40%"}
+```{r}
+#| echo: true
+#| code-fold: true
+fig_season_2 +
+  ggplot2::scale_fill_brewer(type = "qual")
+```
+:::
+:::
+
+::: footer
+Slide borrowed from Alexander Savi (2021)
+
+Functions: [viridis](https://ggplot2.tidyverse.org/reference/scale_viridis.html) (optimized for continuous data), [colorbrewer](https://ggplot2.tidyverse.org/reference/scale_brewer.html) (optimized for discrete data, includes sequential, diverging, and qualitative color scales).
+
+Resources: [viridis Color Maps for R](https://sjmgarnier.github.io/viridis/), [ColorBrewer 2.0](https://colorbrewer2.org/).
+:::
+
+::: notes
+:::
+
+
+## Color blindness {.smaller .scrollable}
+
+::: columns
+::: {.column width="50%"}
+```{r}
+#| echo: true
+#| code-fold: true
+# remotes::install_github("clauswilke/colorblindr")
+library("colorblindr")
+colorblindr::cvd_grid(fig_season_2)
+```
+
+![[Claus Wilke](https://clauswilke.com/dataviz/color-pitfalls.html#not-designing-for-color-vision-deficiency)](images/colorblindness.png)
+
+:::
+
+::: {.column width="50%"}
+```{r}
+#| echo: true
+#| code-fold: true
+library("MetBrewer")
+MetBrewer::colorblind_palettes
+fig_season_2 + ggplot2::scale_fill_manual(values = MetBrewer::met.brewer("VanGogh3", n = 4))
+```
+:::
+:::
+
+::: footer
+Slide borrowed from Alexander Savi (2021)
+
+Packages: [khroma](https://packages.tesselle.org/khroma/) (discrete data), [viridis](https://sjmgarnier.github.io/viridis/) (continuous data), [MetBrewer](https://github.com/BlakeRMills/MetBrewer) & [rijkspalette](https://vankesteren.github.io/rijkspalette/), [colorblindr](https://github.com/clauswilke/colorblindr), [colorspace](https://colorspace.r-forge.r-project.org/articles/ggplot2_color_scales.html).
+
+Resources: [clauswilke.com](https://clauswilke.com/dataviz/color-pitfalls.html){.uri}, [hclwizard.org](https://hclwizard.org/).
+:::
+
+::: notes
+:::
+
+
+## Color accuracy {.smaller}
+
+::: columns
+::: {.column width="50%"}
+Print-proof, [monitor/beamer-proof](https://www.benq.com/en-us/knowledge-center/knowledge/how-to-maintain-color-consistency-on-different-monitors.html), colorblind-proof?
+
+-   Use grayscale (but [color-coding is superior](https://en.wikipedia.org/wiki/Color_coding_in_data_visualization))
+-   Use a secondary aesthetic for color
+-   Use a viridis color map
+
+![Source: [benq.com](https://www.benq.com/en-us/knowledge-center/knowledge/how-to-maintain-color-consistency-on-different-monitors.html)](images/coloraccuracy1.jpeg){fig-align="left"}
+:::
+
+::: {.column width="50%"}
+![Source: [Savi et al. (2018)](https://doi.org/10.1016/j.compedu.2017.12.008)](images/coloraccuracy2.png){fig-align="left"}
+:::
+:::
+
+::: footer
+Slide borrowed from Alexander Savi (2021)
+
+Resources: [viridis Color Maps for R](https://sjmgarnier.github.io/viridis/).
+:::
+
+## Captions {.smaller}
+
+
+::: columns
+::: {.column width="50%"}
+**Title** Descriptive or declarative
+
+**Methods** Keep it brief
+
+**Results** If not (fully captured) in title
+
+**Definitions** Colors, line types, error bars, etc.
+
+**Data source** If external
+:::
+
+::: {.column width="50%"}
+![Source: [sketch.es](https://www.datasketch.es/project/655-frustrations-doing-data-visualization)](images/captions.png){fig-align="left"}
+:::
+:::
+
+::: footer
+Slides borrowed from Alexander Savi (2021)
+
+Resources: [clauswilke.com](https://clauswilke.com/dataviz/figure-titles-captions.html), [more](https://www.internationalscienceediting.com/how-to-write-a-figure-caption/), [more](https://www.aje.com/arc/writing-effective-figure-legend/), [more](https://blog.bioturing.com/2018/05/10/how-to-craft-a-figure-legend-for-scientific-papers/).
+:::
+
+::: notes
+:::
+
+## Typography
+
+::: columns
+::: {.column width="50%"}
+Learn everything about [typography](https://practicaltypography.com/).
+
+Find inspiration and [recommendations](https://www.typewolf.com/recommendations).
+
+Choose a font for [data visualizations](https://medium.com/nightingale/choosing-a-font-for-your-data-visualization-2ed37afea637).
+
+Pick good [font combinations](https://fontjoy.com/).
+
+Or just use [arial or helvetica](https://pubs.acs.org/doi/10.1021/acs.chemmater.6b00306).
+:::
+
+::: {.column width="50%"}
+```{r fig.showtext = TRUE}
+#| echo: true
+#| code-fold: true
+library("showtext")
+sysfonts::font_add_google("Press Start 2P", "2P")
+showtext::showtext_auto()
+fig_season_2 +
+  ggplot2::theme(text = element_text(family = "2P", size = 20))
+```
+:::
+:::
+
+::: footer
+Slides borrowed from Alexander Savi (2021)
+
+Packages: [showtext](https://github.com/yixuan/showtext).
+:::
+
+::: notes
+:::
+
+## File format/size {.smaller}
+
+::: columns
+::: {.column width="50%"}
+-   File size: email attachment, webpage/image load time, compilation time
+-   File format: resizing [vector vs. bitmap/raster](https://www.lifewire.com/vector-and-bitmap-images-1701238). For bitmap images, set the plot resolution: *dpi = c("retina", "print", "screen")*
+
+```{r}
+#| echo: true
+#| eval: false
+ggplot2::ggsave("awesome_plot.png",
+                width = 5,
+                height = 5,
+                units = "cm",
+                dpi = "retina")
+```
+:::
+
+::: {.column width="50%"}
+![Source: [clauswilke.com](https://clauswilke.com/dataviz/image-file-formats.html)](images/file_formats.png){fig-align="left"}
+:::
+:::
+
+::: footer
+Slides borrowed from Alexander Savi (2021)
+
+Enlarge bitmap [with AI](https://letsenhance.io/) (paid). Yes, you can save to [.tex](https://daqana.github.io/tikzDevice/).
+:::
+
+## Font embedding {.smaller}
+
+Vector images pick the closest font available (if the actual font is not available on the recipients computer). You can embed fonts into the vector image.
+
+-   *showtext* [converts characters into polygons](https://github.com/yixuan/showtext/issues/46). Embedding is no longer required, but text is no longer searchable.
+-   *extrafont* [supports font embedding](https://r-graphics.org/recipe-output-fonts-pdf), but supports fewer fonts.
+
+Adobe Acrobat (paid version) can be used to [manually embed fonts in a PDF](https://www.adobe.com/uk/acrobat/resources/embed-fonts-in-pdf.html).
+
+::: footer
+Slides borrowed from Alexander Savi (2021)
+Packages: [showtext](https://github.com/yixuan/showtext), [extrafont](https://github.com/wch/extrafont).
+
+Should [color profiles also be embedded](https://www.color.org/profile_embedding.xalter)? Not sure, and not clear how R/ggplot2 handles this.
+:::
+
+## Continue learning {.smaller}
+
+::: columns
+::: {.column width="50%"}
+[RTFM](https://en.wikipedia.org/wiki/RTFM): [ggplot2 Book](https://ggplot2-book.org/)
+
+Viz types and examples: [From Data to Viz](https://www.data-to-viz.com/#explore), [The R Graph Gallery](https://r-graph-gallery.com/), [clauswilke.com](https://clauswilke.com/dataviz/directory-of-visualizations.html)
+
+Extensions: [ggplot2 Extensions Gallery](https://exts.ggplot2.tidyverse.org/gallery/)
+
+Books: [Fundamentals of Data Visualization](https://clauswilke.com/dataviz/)
+
+NYT: [What's going on in this graph?](https://www.nytimes.com/column/whats-going-on-in-this-graph)
+
+Data: [Statistics Netherlands](https://edwindj.github.io/cbsodataR/) or *data()*
+
+[#30DayChartChallenge](https://30daychartchallenge.org/)
+:::
+
+::: {.column width="50%"}
+![Source: [data-to-viz.com](https://www.data-to-viz.com/#explore)](images/poster_big.png){fig-align="left"}
+:::
+:::
+
+::: footer
+:::
+
+## Get inspiration {.smaller}
+
+::: columns
+::: {.column width="50%"}
+Podcasts: [Data Stories](https://datastori.es/), [Explore Explain](https://www.visualisingdata.com/podcast/), [Data Viz Today](https://dataviztoday.com/)
+
+Blogs: [FlowingData](https://flowingdata.com/)
+
+Journals: [Nightingale](https://nightingaledvs.com/)
+
+Comics: [Matt-Heun Hong](https://medium.com/@MattIanHong), [Martin Telefont](https://twitter.com/martintelefont/status/1147737522182742017), [Natalia Kiseleva](https://eolay.tilda.ws/datavizcomics/en)
+
+Generative art: [Clause O. Wilke](https://clauswilke.com/art/), [Danielle Navarro](https://art.djnavarro.net/), [Thomas Lin Pedersen](https://www.data-imaginist.com/art)
+
+Awards: [Information is Beautiful](https://www.informationisbeautifulawards.com/showcase?action=index&controller=showcase&page=1&pcategory=winner&type=awards)
+
+Interactive visualizations: [R Psychologist](https://rpsychologist.com/viz)
+
+Explorable explanations: [Nicky Case](https://ncase.me/), [Setosa](https://setosa.io/)
+:::
+
+::: {.column width="50%"}
+![Thomas Lin Pedersen](https://thomaslinpedersen.art/work/becoming/)](images/becoming_2.jpg){fig-align="left"}
+:::
+:::
+
+:::footer
+:::
+
+
+## Interactive viz {.smaller}
+
+::: columns
+::: {.column width="50%"}
+```{r}
+#| eval: false
+#| echo: true
+sliderInput("bins", "Number of bins:", 
+            min = 1, max = 50, value = 30)
+plotOutput("distPlot")
+```
+
+```{r}
+#| context: server
+#| eval: false
+#| echo: true
+output$distPlot <- renderPlot({
+  x <- faithful[, 2]  # Old Faithful Geyser data
+  bins <- seq(min(x), max(x), length.out = input$bins + 1)
+  hist(x, breaks = bins, col = 'darkgray', border = 'white')
+})
+```
+
+![[Shiny](https://shiny.posit.co/r/getstarted/shiny-basics/lesson1/index.html)](images/shiny.png)
+:::
+
+::: {.column width="50%"}
+[**shiny**](https://shiny.rstudio.com/) builds interactive web apps
+
+[**ggplotly**](https://plotly.com/ggplot2/) converts ggplot2 figures into interactive figures
+
+[gganimate](https://gganimate.com/) includes animated elements to ggplot2 figures
+
+[htmlwidgets](https://www.htmlwidgets.org/) creates JavaScript visualization widgets
+
+[flexdashboard](https://pkgs.rstudio.com/flexdashboard/) creates interactive dashboards
+
+[ggvis](https://ggvis.rstudio.com/) (dormant)
+:::
+:::
+
+::: footer
+:::
+
 
 # Best plots 🥇 {background-color="#8000FF"}
 
