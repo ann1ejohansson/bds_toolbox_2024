@@ -18,7 +18,7 @@
     "href": "index.html#content-2",
     "title": "Data Visualization",
     "section": "Content",
-    "text": "Content\n\n\n\nAssignments\n\n\n\n\n\n\n\n\n\nAssignment\nContent\nDeadline\nGrading\n\n\n\n\nData Visualization Assignment 1\nMake a good and bad visualization\nCopy this plot\nSunday, September 15th, 23:59\n15%\n\n\nData Visualization Assignment 2\nMake a visualization for your final assignment\nCopy this (or multiple) plots\nSunday, September 22nd, 23:59\n15%\n\n\nBuild a Shiny App\nRecreate a Shiny dashboard\nSunday, October 13th, 23:59\n10%\n\n\nFinal assignment\nMake 3 visualizations of Prowise Learn data\nPitch to Prowise colleagues\n\n60%\n\n\n\nData visualization assignments make up a total of 20% of your final BDS Toolbox grade. ::: footer :::"
+    "text": "Content\n\n\n\nAssignments\n\nChange grading\n\n\n\n\n\n\n\n\n\n\nAssignment\nContent\nDeadline\nGrading\n\n\n\n\nData Visualization Assignment 1\nMake a good and bad visualization\nCopy this plot\nSunday, September 15th, 23:59\n15%\n\n\nData Visualization Assignment 2\nMake a visualization for your final assignment\nCopy this (or multiple) plots\nSunday, September 22nd, 23:59\n15%\n\n\nBuild a Shiny App\nRecreate a Shiny dashboard\nSunday, October 13th, 23:59\n10%\n\n\nFinal assignment\nMake 3 visualizations of Prowise Learn data\nPitch to Prowise colleagues\n\n60%\n\n\n\nData visualization assignments make up a total of 20% of your final BDS Toolbox grade. ::: footer :::"
   },
   {
     "objectID": "index.html#content-3",
@@ -235,34 +235,34 @@
     "href": "index.html#project-1",
     "title": "Data Visualization",
     "section": "Project 1",
-    "text": "Project 1"
+    "text": "Project 1\nAbility development\n\nAudience: Teachers / Prowise team\nChanges in [score/ability] over [time/sessions/items] per [player/class/game/learning goal/time-period]\n\nProwise example: “How do first-time players improve in the first 10 sessions of the game [Verhaaltjes]?”\nTeacher example: “Which children are not showing the expected improvement?” [decline / stopped growth]"
   },
   {
     "objectID": "index.html#project-2",
     "href": "index.html#project-2",
     "title": "Data Visualization",
     "section": "Project 2",
-    "text": "Project 2"
+    "text": "Project 2\nTeacher dashboard\n\nAudience: Teachers\nMake an overview of the scores of children in a classroom, for instance:\n\nWhich games were played in the last [week/month]?\nHow much did they play?\nWhat are their ability scores?\n\nExample: Overview that helps teachers to start off the day\nExample: Overview that dives deeper into the scores of a [child/class]"
   },
   {
     "objectID": "index.html#project-3",
     "href": "index.html#project-3",
     "title": "Data Visualization",
     "section": "Project 3",
-    "text": "Project 3"
+    "text": "Project 3\nUser engagement\n\nAudience: Prowise team / Business Information\nCan behavioral patterns in the use of the system be identified? For example:\n\nHow many children play in our system per [week/month]? Any differences between the three applications [Math Garden, Language Sea, Words&Birds]?\nHow many items have been completed per domain and/or learning goal in a [week/month/year]?\nAre there differences in when children play [school hours, evening, weekend]?\nHow is the show coins/difficulty/question mark feature used?"
   },
   {
     "objectID": "index.html#project-4",
     "href": "index.html#project-4",
     "title": "Data Visualization",
     "section": "Project 4",
-    "text": "Project 4"
+    "text": "Project 4\nMotivation\n\nAudience: Teacher / Prowise team / Data Scientists or researchers\nPick one or two motivational variables and compute them from log record data.\n\nExamples of motivational metrics could be: [quitting, persistence, game / difficulty selection, number of items played per login], etc …\n\nAre there [between- / within- player] differences in motivation? For example:\n\nDo children differ in how many items they complete in a given session?\nDo children consistently play the same games?\nDoes difficulty level predict quitting?\n\nTeacher example: Which students are ‘highly’ or ‘poorly’ motivated/show undesired play behavior?\nResearcher example: Are motivation effects stable across [time/games/age groups]?"
   },
   {
     "objectID": "index.html#project-5",
     "href": "index.html#project-5",
     "title": "Data Visualization",
     "section": "Project 5",
-    "text": "Project 5\nInformation about final project\n\n\n\n\nCover photo made in R by Danielle Navarro"
+    "text": "Project 5\n\nAudience: Prowise team / Data scientist\nInvestigate the scores [expected / observed] per [item/user/groups] within psychometric models. For example:\n\nHow fast are the [expected_scores] converging to [observed_scores]? Show the relation with playing frequency\nDifferent categories of model misfits (e.g., discrepancies between [expected & observed scores per item/user]\nInvestigate item drift\n\n\n\n\n\n\nCover photo made in R by Danielle Navarro"
   }
 ]

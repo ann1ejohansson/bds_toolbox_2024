@@ -76,6 +76,10 @@ library(tidyverse)
 
 ### Assignments {.smaller .scrollable}
 
+::: notes
+Change grading
+:::
+
 +---------------------------------+------------------------------------------------+-------------------------------+--------------+
 | Assignment                      | Content                                        | Deadline                      | Grading      |
 +=================================+================================================+===============================+==============+
@@ -690,7 +694,7 @@ Work on:
 :::
 :::
 
-:::footer
+::: footer
 :::
 
 ## Recap
@@ -792,7 +796,7 @@ pizza_season %>%
 :::
 
 ::: footer
-Slide borrowed from [Alexander Savi (2022)](https://www.alexandersavi.nl/assets/lectures/2022_bds_toolbox/bds_toolbox_dataviz.html#/section) 
+Slide borrowed from [Alexander Savi (2022)](https://www.alexandersavi.nl/assets/lectures/2022_bds_toolbox/bds_toolbox_dataviz.html#/section)
 
 Packages: [cowplot](https://wilkelab.org/cowplot/articles/introduction.html), [firatheme](https://github.com/vankesteren/firatheme), [hrbrthemes](https://cinc.rud.is/web/packages/hrbrthemes/) (typography-centric themes), [ggthemes](https://jrnold.github.io/ggthemes/) (collection),<br>and [xkcd](https://r-forge.r-project.org/projects/xkcd/) (dormant), [ggpomological](https://www.garrickadenbuie.com/project/ggpomological/), [tvthemes](https://ryo-n7.github.io/tvthemes/), [wesanderson](https://github.com/karthik/wesanderson) (color palettes).
 :::
@@ -999,7 +1003,7 @@ Vector images pick the closest font available (if the actual font is not availab
 Adobe Acrobat (paid version) can be used to [manually embed fonts in a PDF](https://www.adobe.com/uk/acrobat/resources/embed-fonts-in-pdf.html).
 
 ::: footer
-Slides borrowed from Alexander Savi (2021) 
+Slides borrowed from Alexander Savi (2021)
 
 Packages: [showtext](https://github.com/yixuan/showtext), [extrafont](https://github.com/wch/extrafont).
 
@@ -1126,12 +1130,77 @@ RXKCD::getXKCD(which = "2476")
 
 ## Project 1
 
+### Ability development
+
+-   Audience: Teachers / Prowise team
+-   Changes in <span class="bracketed">[score/ability]</span> over <span class="bracketed">[time/sessions/items]</span> per <span class="bracketed">[player/class/game/learning goal/time-period]</span>
+    -   Prowise example: “How do first-time players improve in the first 10 sessions of the game <span class="bracketed">[Verhaaltjes]</span>?”
+    -   Teacher example: “Which children are not showing the expected improvement?” <span class="bracketed">[decline / stopped growth]</span>
+
 ## Project 2
+
+### Teacher dashboard
+
+-   Audience: Teachers
+
+-   Make an overview of the scores of children in a classroom, for instance:
+
+    -   Which games were played in the last <span class="bracketed">[week/month]</span>?
+
+    -   How much did they play?
+
+    -   What are their ability scores?
+
+-   Example: Overview that helps teachers to start off the day
+
+-   Example: Overview that dives deeper into the scores of a <span class="bracketed">[child/class]</span>
 
 ## Project 3
 
+### User engagement
+
+-   Audience: Prowise team / Business Information
+
+-   Can behavioral patterns in the use of the system be identified? For example:
+
+    -   How many children play in our system per <span class="bracketed">[week/month]</span>? Any differences between the three applications <span class="bracketed">[Math Garden, Language Sea, Words&Birds]</span>?
+
+    -   How many items have been completed per domain and/or learning goal in a <span class="bracketed">[week/month/year]</span>?
+
+    -   Are there differences in when children play <span class="bracketed">[school hours, evening, weekend]</span>?
+
+    -   How is the show coins/difficulty/question mark feature used?
+
 ## Project 4
 
-## Project 5 
+### Motivation
 
-Information about final project
+-   Audience: Teacher / Prowise team / Data Scientists or researchers
+
+-   Pick one or two motivational variables and compute them from log record data.
+
+    -   Examples of motivational metrics could be: <span class="bracketed">[quitting, persistence, game / difficulty selection, number of items played per login]</span>, etc …
+
+-   Are there <span class="bracketed">[between- / within- player]</span> differences in motivation? For example:
+
+    -   Do children differ in how many items they complete in a given session?
+
+    -   Do children consistently play the same games?
+
+    -   Does difficulty level predict quitting?
+
+-   Teacher example: Which students are ‘highly’ or ‘poorly’ motivated/show undesired play behavior?
+
+-   Researcher example: Are motivation effects stable across <span class="bracketed">[time/games/age groups]</span>?
+
+## Project 5
+
+-   Audience: Prowise team / Data scientist
+
+-   Investigate the scores <span class="bracketed">[expected / observed]</span> per <span class="bracketed">[item/user/groups]</span> within psychometric models. For example:
+
+    -   How fast are the <span class="bracketed">[expected_scores]</span> converging to <span class="bracketed">[observed_scores]</span>? Show the relation with playing frequency
+
+    -   Different categories of model misfits (e.g., discrepancies between <span class="bracketed">[expected & observed scores per item/user]</span>
+
+    -   Investigate item drift

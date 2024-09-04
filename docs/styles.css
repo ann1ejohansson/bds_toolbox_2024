@@ -15,6 +15,15 @@
   font-size: 0.4em;  /* Adjust the value to your preference */
 }
 
+/* Make text within square brackets blue */
+span.bracketed::before, span.bracketed::after {
+    content: "";
+    color: blue;
+}
+
+span.bracketed {
+    color: blue;
+}
 
 /* Library/CloudStorage/OneDrive-UvA/2024-2025/BDS Toolbox/Quarto/slides_dataviz.qmd
 /Users/anniejohansson/Desktop/Quarto /*
