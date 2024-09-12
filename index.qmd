@@ -147,8 +147,8 @@ Data visualization assignments make up a total of 30% of your final BDS Toolbox 
 :::
 
 ------------------------------------------------------------------------
-![](images/bandjes.jpeg){width="400"}
-![](images/bandjes2.jpeg){width="400"}
+![](images/bandjes.jpeg)
+![](images/bandjes2.jpeg)
 
 ------------------------------------------------------------------------
 
