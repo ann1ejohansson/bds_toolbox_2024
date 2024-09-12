@@ -83,22 +83,22 @@ Change grading
 +---------------------------------+------------------------------------------------+-------------------------------+--------------+
 | Assignment                      | Content                                        | Deadline                      | Grading      |
 +=================================+================================================+===============================+==============+
-| Data Visualization Assignment 1 | Make a good and bad visualization              | Sunday, September 15th, 23:59 | 15%          |
+| Data Visualization Assignment 1 | Make a good and bad visualization              | Sunday, September 15th, 23:59 | 20%          |
 |                                 |                                                |                               |              |
 |                                 | Copy this plot                                 |                               |              |
 +---------------------------------+------------------------------------------------+-------------------------------+--------------+
-| Data Visualization Assignment 2 | Make a visualization for your final assignment | Sunday, September 22nd, 23:59 | 15%          |
+| Data Visualization Assignment 2 | Make a visualization for your final assignment | Sunday, September 22nd, 23:59 | 20%          |
 |                                 |                                                |                               |              |
 |                                 | Copy this (or multiple) plots                  |                               |              |
 +---------------------------------+------------------------------------------------+-------------------------------+--------------+
 | Build a Shiny App               | Recreate a Shiny dashboard                     | Sunday, October 13th, 23:59   | 10%          |
 +---------------------------------+------------------------------------------------+-------------------------------+--------------+
-| Final assignment                | Make 3 visualizations of Prowise Learn data    |                               | 60%          |
+| Final assignment                | Make 3 visualizations of Prowise Learn data    |                               | 50%          |
 |                                 |                                                |                               |              |
 |                                 | Pitch to Prowise colleagues                    |                               |              |
 +---------------------------------+------------------------------------------------+-------------------------------+--------------+
 
-Data visualization assignments make up a total of 20% of your final BDS Toolbox grade. ::: footer :::
+Data visualization assignments make up a total of 30% of your final BDS Toolbox grade.
 
 ## Content {.smaller .scrollable}
 

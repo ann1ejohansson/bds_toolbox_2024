@@ -83,22 +83,22 @@ Change grading
 +---------------------------------+------------------------------------------------+-------------------------------+--------------+
 | Assignment                      | Content                                        | Deadline                      | Grading      |
 +=================================+================================================+===============================+==============+
-| Data Visualization Assignment 1 | Make a good and bad visualization              | Sunday, September 15th, 23:59 | 15%          |
+| Data Visualization Assignment 1 | Make a good and bad visualization              | Sunday, September 15th, 23:59 | 20%          |
 |                                 |                                                |                               |              |
 |                                 | Copy this plot                                 |                               |              |
 +---------------------------------+------------------------------------------------+-------------------------------+--------------+
-| Data Visualization Assignment 2 | Make a visualization for your final assignment | Sunday, September 22nd, 23:59 | 15%          |
+| Data Visualization Assignment 2 | Make a visualization for your final assignment | Sunday, September 22nd, 23:59 | 20%          |
 |                                 |                                                |                               |              |
 |                                 | Copy this (or multiple) plots                  |                               |              |
 +---------------------------------+------------------------------------------------+-------------------------------+--------------+
 | Build a Shiny App               | Recreate a Shiny dashboard                     | Sunday, October 13th, 23:59   | 10%          |
 +---------------------------------+------------------------------------------------+-------------------------------+--------------+
-| Final assignment                | Make 3 visualizations of Prowise Learn data    |                               | 60%          |
+| Final assignment                | Make 3 visualizations of Prowise Learn data    |                               | 50%          |
 |                                 |                                                |                               |              |
 |                                 | Pitch to Prowise colleagues                    |                               |              |
 +---------------------------------+------------------------------------------------+-------------------------------+--------------+
 
-Data visualization assignments make up a total of 20% of your final BDS Toolbox grade. ::: footer :::
+Data visualization assignments make up a total of 30% of your final BDS Toolbox grade.
 
 ## Content {.smaller .scrollable}
 
@@ -120,7 +120,6 @@ Data visualization assignments make up a total of 20% of your final BDS Toolbox 
 
 -   <https://psyteachr.github.io/introdataviz/plotstyle.html>
 :::
-
 
 # Bad plots 💩 {background-color="#8000FF"}
 
@@ -146,6 +145,10 @@ Data visualization assignments make up a total of 20% of your final BDS Toolbox 
 ::: fragment
 ![](images/why_viz1.png){width="400"}
 :::
+
+------------------------------------------------------------------------
+![](images/bandjes.jpeg){width="400"}
+![](images/bandjes2.jpeg){width="400"}
 
 ------------------------------------------------------------------------
 
@@ -259,7 +262,6 @@ We focus on explanatory data viz (also bridge to next). Beautiful plots!
 
 ![reddit.com/r/dataisugly](images/lidl.png){fig-align="left" width="500"}
 
-
 ::: footer
 :::
 
@@ -281,7 +283,6 @@ We focus on explanatory data viz (also bridge to next). Beautiful plots!
 ::: footer
 :::
 
-
 ------------------------------------------------------------------------
 
 💬
@@ -291,7 +292,6 @@ We focus on explanatory data viz (also bridge to next). Beautiful plots!
 ::: footer
 :::
 
-
 ------------------------------------------------------------------------
 
 💬
@@ -300,7 +300,6 @@ We focus on explanatory data viz (also bridge to next). Beautiful plots!
 
 ::: footer
 :::
-
 
 ------------------------------------------------------------------------
 
@@ -556,7 +555,7 @@ RXKCD::getXKCD(which = "833")
 
 # Better plots 📈 {background-color="#8000FF"}
 
-:::footer
+::: footer
 :::
 
 ## Today
@@ -1013,10 +1012,12 @@ RXKCD::getXKCD(which = "2476")
 :::
 
 ## ... that's up to you! 🫵
+
 ::: footer
 :::
 
 ## Final assignment
+
 ::: footer
 :::
 
@@ -1028,7 +1029,7 @@ RXKCD::getXKCD(which = "2476")
 -   Changes in [\[score/ability\]]{.bracketed} over [\[time/sessions/items\]]{.bracketed} per [\[player/class/game/learning goal/time-period\]]{.bracketed}
     -   Prowise example: “How do first-time players improve in the first 10 sessions of the game [\[Verhaaltjes\]]{.bracketed}?”
     -   Teacher example: “Which children are not showing the expected improvement?” [\[decline / stopped growth\]]{.bracketed}
-    
+
 ::: footer
 :::
 
@@ -1068,7 +1069,7 @@ RXKCD::getXKCD(which = "2476")
     -   Are there differences in when children play [\[school hours, evening, weekend\]]{.bracketed}?
 
     -   How is the show coins/difficulty/question mark feature used?
-    
+
 ::: footer
 :::
 
@@ -1108,6 +1109,6 @@ RXKCD::getXKCD(which = "2476")
     -   Different categories of model misfits (e.g., discrepancies between [\[expected & observed scores per item/user\]]{.bracketed}
 
     -   Investigate item drift
-    
+
 ::: footer
 :::
