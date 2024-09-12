@@ -25,7 +25,7 @@
     "href": "index.html#content-3",
     "title": "Data Visualization",
     "section": "Content",
-    "text": "Content\n\n\n\nMaterials\n\n\n\n\n\n\n\n\n\nr4ds.had.co.nz\n\n\n\n\n\n\n\nsocviz.co\n\n\n\n\n\nVideos on canvas\n\n\n\n\nExtra resources\n\nClaus Wilke: Fundamentals of Data Viz\nhttps://psyteachr.github.io/introdataviz/plotstyle.html"
+    "text": "Content\n\n\n\nMaterials\n\n\n\n\n\n\n\n\n\nr4ds.had.co.nz\n\n\n\n\n\n\n\nsocviz.co\n\n\n\n\n\n\n\nVideos on canvas\n\n\n\n\n\n\nExtra resources\n\n\n\nClaus Wilke: Fundamentals of Data Viz\nhttps://psyteachr.github.io/introdataviz/plotstyle.html"
   },
   {
     "objectID": "index.html#today",
@@ -263,6 +263,272 @@
     "href": "index.html#project-5",
     "title": "Data Visualization",
     "section": "Project 5",
-    "text": "Project 5\n\nAudience: Prowise team / Data scientist\nInvestigate the scores [expected / observed] per [item/user/groups] within psychometric models. For example:\n\nHow fast are the [expected_scores] converging to [observed_scores]? Show the relation with playing frequency\nDifferent categories of model misfits (e.g., discrepancies between [expected & observed scores per item/user]\nInvestigate item drift\n\n\n\n\n\n\nCover photo made in R by Danielle Navarro"
+    "text": "Project 5\n\nAudience: Prowise team / Data scientist\nInvestigate the scores [expected / observed] per [item/user/groups] within psychometric models. For example:\n\nHow fast are the [expected_scores] converging to [observed_scores]? Show the relation with playing frequency\nDifferent categories of model misfits (e.g., discrepancies between [expected & observed scores per item/user]\nInvestigate item drift\n\n\n\n\n\n\n\n\n\nCover photo made in R by Danielle Navarro"
+  },
+  {
+    "objectID": "slides_class1.html#content",
+    "href": "slides_class1.html#content",
+    "title": "Data Visualization",
+    "section": "Content",
+    "text": "Content\n\n\n\nSchedule\n\n\n\n\n\n\n\n\n\nWhen\nWhat\nSelf-study\nTutorial\n\n\n\n\nFriday, 08/09\n12.00 - 15.00\nData Visualization Session 1\nGood and bad plots\nggplot basics\n[Read] DV book ch. 1, 3\n[Watch videos] Fundamentals of Data Visualization\nWork on Data Visualization Assignment 1\n\n\nTuesday, 17/09\n15.00 - 18.00\n\n\nData Visualization Session 2\nBetter plots\nIntroduction to final assignment\n[Read] DV Book ch. 3.7, 4.3, 5.3, 5.5, 5.6, 6.0, 6.1, 6.2, 8.1, 8.2, 8.3\n[Watch videos] Themes, Recycling Themes, Trend lines / Stats, Color scheme, Multiple plots, Facets, Saving plots\nWork on Data Visualization Assignment 2\n\n\nTuesday, 08/10\n15.00 - 18.00\nBuild a Shiny App\nExtra/optional material: Shiny files (canvas)\nWork on Shiny Assignment"
+  },
+  {
+    "objectID": "slides_class1.html#content-1",
+    "href": "slides_class1.html#content-1",
+    "title": "Data Visualization",
+    "section": "Content",
+    "text": "Content\n\n\n\nLearning Goals\n\nDesign visualizations that communicate the intended message clearly\nBuild data visualizations using the ggplot2 library in R\nBuild interactive dashboards\nPitch the results of a data visualization project to a client"
+  },
+  {
+    "objectID": "slides_class1.html#content-2",
+    "href": "slides_class1.html#content-2",
+    "title": "Data Visualization",
+    "section": "Content",
+    "text": "Content\n\n\n\nAssignments\n\nChange grading\n\n\n\n\n\n\n\n\n\n\nAssignment\nContent\nDeadline\nGrading\n\n\n\n\nData Visualization Assignment 1\nMake a good and bad visualization\nCopy this plot\nSunday, September 15th, 23:59\n15%\n\n\nData Visualization Assignment 2\nMake a visualization for your final assignment\nCopy this (or multiple) plots\nSunday, September 22nd, 23:59\n15%\n\n\nBuild a Shiny App\nRecreate a Shiny dashboard\nSunday, October 13th, 23:59\n10%\n\n\nFinal assignment\nMake 3 visualizations of Prowise Learn data\nPitch to Prowise colleagues\n\n60%\n\n\n\nData visualization assignments make up a total of 20% of your final BDS Toolbox grade. ::: footer :::"
+  },
+  {
+    "objectID": "slides_class1.html#content-3",
+    "href": "slides_class1.html#content-3",
+    "title": "Data Visualization",
+    "section": "Content",
+    "text": "Content\n\n\n\nMaterials\n\n\n\n\n\n\n\n\n\nr4ds.had.co.nz\n\n\n\n\n\n\n\nsocviz.co\n\n\n\n\n\n\n\nVideos on canvas\n\n\n\n\n\n\nExtra resources\n\n\n\nClaus Wilke: Fundamentals of Data Viz\nhttps://psyteachr.github.io/introdataviz/plotstyle.html"
+  },
+  {
+    "objectID": "slides_class1.html#today",
+    "href": "slides_class1.html#today",
+    "title": "Data Visualization",
+    "section": "Today",
+    "text": "Today\n\n\n\n📊 What makes a plot good (and bad)?\n🪄 Guiding principles\n✏️ Work on assignment 1"
+  },
+  {
+    "objectID": "slides_class1.html#why-visualize-data",
+    "href": "slides_class1.html#why-visualize-data",
+    "title": "Data Visualization",
+    "section": "Why visualize data? 💬",
+    "text": "Why visualize data? 💬"
+  },
+  {
+    "objectID": "slides_class1.html#anscombes-quartet",
+    "href": "slides_class1.html#anscombes-quartet",
+    "title": "Data Visualization",
+    "section": "Anscombe’s quartet",
+    "text": "Anscombe’s quartet\n\n\n\n \n\n\n\n\nCode\nlibrary(\"datasauRus\")\ndatasaurus_dozen %&gt;% \n  ggplot2::ggplot(aes(x = x, y = y, color = dataset)) +\n  ggplot2::geom_point() +\n  ggplot2::theme_void() +\n  ggplot2::geom_smooth(method = \"lm\", color = \"gray\", fill = \"gray\", alpha = .5) +\n  ggplot2::theme(legend.position = \"none\", text = element_text(size = 30)) +\n  ggplot2::facet_wrap(~dataset, ncol = 4)\n\n\n\n\n\n\n\n\n\n\n\nPackages: datasauRus, anscombiser.\nMore information: Same Stats, Different Graphs, socviz.co."
+  },
+  {
+    "objectID": "slides_class1.html#exploratory-versus-explanatory",
+    "href": "slides_class1.html#exploratory-versus-explanatory",
+    "title": "Data Visualization",
+    "section": "Exploratory versus explanatory",
+    "text": "Exploratory versus explanatory\n\n\n\n\n\nSource: Natalia Kiseleva\n\n\n\n\n\n\nSource: Scott McCloud\n\n\n\nExploratory: examine the structure of your data.\nExplanatory: tell a story with your data.\n\n\n\nResources: clauswilke.com (telling a story and making a point), susielu.com (different interpretation of exploratory/explanatory).\n\n\nExploratory in the sense of data exploration. Exploratory in the sense of visualization exploration (as in previous example, where the same data can be plotted in several ways). In both cases, you can create ugly plots.\nWe focus on explanatory data viz (also bridge to next). Beautiful plots!"
+  },
+  {
+    "objectID": "slides_class1.html#what-can-we-learn-about-the-2024-olympics",
+    "href": "slides_class1.html#what-can-we-learn-about-the-2024-olympics",
+    "title": "Data Visualization",
+    "section": "🏅 What can we learn about the 2024 Olympics?",
+    "text": "🏅 What can we learn about the 2024 Olympics?\n\n\n\n\n\n\n\n\nIreland is headed straight for zero?\n\n\n\n\n\n\nStacked confusion!\n\n\n\n\n\n\nDid the Netherlands place 8th?\n\n\n\n\n\n\n\n\nHow long does it take you to understand it?\n\n\n\n\n\n\nAxes? Colors?"
+  },
+  {
+    "objectID": "slides_class1.html#speed-dates",
+    "href": "slides_class1.html#speed-dates",
+    "title": "Data Visualization",
+    "section": "Speed dates 💬",
+    "text": "Speed dates 💬\n\n\n\n\n\n\nWhat do you think about this plot?\nWhat elements can be improved?\nAre there still good things with the plot?\n\n\n\n\n\nKarl Broman"
+  },
+  {
+    "objectID": "slides_class1.html#one-dataset-many-visualizations",
+    "href": "slides_class1.html#one-dataset-many-visualizations",
+    "title": "Data Visualization",
+    "section": "One dataset, many visualizations",
+    "text": "One dataset, many visualizations\n\n\n\n\nCode\nlibrary(\"gt\")\ndata(\"pizzaplace\")\npizza_top &lt;- pizzaplace %&gt;%\n  dplyr::mutate(size = factor(size, levels = c(\"S\", \"M\", \"L\"))) %&gt;%\n  dplyr::count(name, type, size, price, sort = TRUE) %&gt;%\n  dplyr::top_n(n = 5)\npizza_top %&gt;%\n  gt::gt() %&gt;%\n  gt::tab_header(title = \"Pizza Top 5\", subtitle = \"2015\") %&gt;%\n  gt::fmt_currency(columns = price, currency = \"USD\") %&gt;%\n  gt::tab_source_note(source_note = gt::md(\"Source: [pizzaplace dataset](https://gt.rstudio.com/articles/gt-datasets.html#pizzaplace)\")) %&gt;%\n  gt::opt_stylize(style = 6)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nPizza Top 5\n\n\n2015\n\n\nname\ntype\nsize\nprice\nn\n\n\n\n\nbig_meat\nclassic\nS\n$12.00\n1914\n\n\nthai_ckn\nchicken\nL\n$20.75\n1410\n\n\nfive_cheese\nveggie\nL\n$18.50\n1409\n\n\nfour_cheese\nveggie\nL\n$17.95\n1316\n\n\nclassic_dlx\nclassic\nM\n$16.00\n1181\n\n\n\nSource: pizzaplace dataset\n\n\n\n\n\n\n\n\n\n\n\nCode\nlibrary(\"ggplot2\")\npizza_top %&gt;%\n  ggplot2::ggplot(aes(x = reorder(name, n, decreasing = TRUE), y = n)) +\n  ggplot2::geom_point(aes(color = type, size = size)) +\n  ggplot2::geom_text(aes(label = price), nudge_y = -30) +\n  ggplot2::labs(title = \"Pizza Top 5\", subtitle = \"2015\", x = \"name\")"
+  },
+  {
+    "objectID": "slides_class1.html#one-dataset-many-visualizations-1",
+    "href": "slides_class1.html#one-dataset-many-visualizations-1",
+    "title": "Data Visualization",
+    "section": "One dataset, many visualizations",
+    "text": "One dataset, many visualizations\n\n\n\n\nCode\nlibrary(\"gt\")\npizza_season &lt;- pizzaplace %&gt;%\n  dplyr::mutate(month = lubridate::month(date, label = TRUE)) %&gt;%\n  dplyr::group_by(month) %&gt;%\n  dplyr::count(type)\npizza_season %&gt;%\n  tidyr::pivot_wider(names_from = month, values_from = n) %&gt;%\n  gt::gt() %&gt;%\n  gt::tab_header(title = \"Pizza Season\", subtitle = \"2015\") %&gt;%\n  gt::tab_source_note(source_note = gt::md(\"Source: [pizzaplace dataset](https://gt.rstudio.com/articles/gt-datasets.html#pizzaplace)\")) %&gt;%\n  gt::opt_stylize(style = 6)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nPizza Season\n\n\n2015\n\n\ntype\nJan\nFeb\nMar\nApr\nMay\nJun\nJul\nAug\nSep\nOct\nNov\nDec\n\n\n\n\nchicken\n913\n875\n994\n924\n939\n910\n963\n934\n900\n832\n981\n885\n\n\nclassic\n1257\n1178\n1236\n1253\n1324\n1199\n1331\n1283\n1202\n1181\n1262\n1182\n\n\nsupreme\n1044\n964\n991\n1013\n1045\n1040\n1041\n991\n877\n998\n1050\n933\n\n\nveggie\n1018\n944\n1040\n961\n1020\n958\n1057\n960\n911\n872\n973\n935\n\n\n\nSource: pizzaplace dataset\n\n\n\n\n\n\n\n\n\n\n\nCode\nlibrary(\"ggplot2\")\nlibrary(\"lubridate\")\nfig_season_1 &lt;- pizza_season %&gt;%\n  ggplot2::ggplot(aes(x = month, y = n, group = type)) +\n  ggplot2::geom_line(aes(linetype = type)) +\n  ggplot2::labs(title = \"Pizza Season\", subtitle = \"2015\")\nfig_season_1\n\nfig_season_2 &lt;- pizza_season %&gt;%\n  ggplot2::ggplot(aes(x = month, y = n, group = type)) +\n  ggplot2::geom_bar(aes(fill = type), stat = \"identity\") +\n  ggplot2::labs(title = \"Pizza Season\", subtitle = \"2015\")\nfig_season_2"
+  },
+  {
+    "objectID": "slides_class1.html#some-good-examples",
+    "href": "slides_class1.html#some-good-examples",
+    "title": "Data Visualization",
+    "section": "Some good examples",
+    "text": "Some good examples\n Distributions are informative\n\n\n\n\n\n\nNYT Graphic - Obamacare spending\nHow to reproduce a NYT graphic"
+  },
+  {
+    "objectID": "slides_class1.html#tips-for-the-best-viz",
+    "href": "slides_class1.html#tips-for-the-best-viz",
+    "title": "Data Visualization",
+    "section": "Tips for the best viz",
+    "text": "Tips for the best viz\n\nIs it explaining data?\nIs the information complete and correct?\nAre axes correct? (+ Should they have a zero-point?)\nDo the colors work?\nAre all elements needed?\nWhat is the data to ink ratio?\nIs it understandable & simple?\nDoes it portray one conclusion?"
+  },
+  {
+    "objectID": "slides_class1.html#break",
+    "href": "slides_class1.html#break",
+    "title": "Data Visualization",
+    "section": "Break",
+    "text": "Break\n\n\n\n\nlibrary(\"RXKCD\")\nRXKCD::getXKCD(which = \"833\")"
+  },
+  {
+    "objectID": "slides_class1.html#own-work",
+    "href": "slides_class1.html#own-work",
+    "title": "Data Visualization",
+    "section": "📝 Own work",
+    "text": "📝 Own work\n\n\n\n\n\n\n\n\n\n\n\n\nAssignment\nContent\nMaterials\nDeadline\n\n\n\n\nData Visualization Assignment 1\nMake a good and bad visualization\nCopy this plot\nLecture slides\n[Read] DV book ch. 1, 3\n[Watch videos] Fundamentals of Data Visualization\nSunday, September 15th, 23.59"
+  },
+  {
+    "objectID": "slides_class1.html#today-1",
+    "href": "slides_class1.html#today-1",
+    "title": "Data Visualization",
+    "section": "Today",
+    "text": "Today\n\n\n📊 More (your) good examples\n✨ More data visualization features\n📝 Introduction to final project\n\nWork on:\n✏️ Brainstorm ideas for final project\n✏️ Data viz assignment 2"
+  },
+  {
+    "objectID": "slides_class1.html#recap",
+    "href": "slides_class1.html#recap",
+    "title": "Data Visualization",
+    "section": "Recap",
+    "text": "Recap\n\n\n✓ Keep it simple.\n✓ Don’t mislead.\n✓ Tell one story.\n✓ First impressions matter!"
+  },
+  {
+    "objectID": "slides_class1.html#chart-junk",
+    "href": "slides_class1.html#chart-junk",
+    "title": "Data Visualization",
+    "section": "Chart junk?",
+    "text": "Chart junk?\n\n\n\n\n\nNYT\n\n\n\n\n\n\nClaus Wilke"
+  },
+  {
+    "objectID": "slides_class1.html#themes",
+    "href": "slides_class1.html#themes",
+    "title": "Data Visualization",
+    "section": "Themes",
+    "text": "Themes\n\n\n\n\nCode\nlibrary(\"cowplot\")\nfig_season_1 +\n  cowplot::theme_cowplot()\n\n\n\n\n\n\n\n\n\n\n\n\nCode\n# download.file(\"https://github.com/ipython/xkcd-font/raw/master/xkcd-script/font/xkcd-script.ttf\", destfile = \"xkcd-script.ttf\")  # download xkcd Script font\n# system(\"open xkcd-script.ttf\", wait = FALSE)  # open and install xkcd Script font on MacOS\n# download.file(\"http://simonsoftware.se/other/xkcd.ttf\", destfile = \"xkcd.ttf\")  # download xkcd font\n# system(\"open xkcd.ttf\", wait = FALSE)  # open and install xkcd font on MacOS\nlibrary(\"showtext\")\nlibrary(\"xkcd\")\n#sysfonts::font_add(family = \"xkcd Script\", regular = \"xkcd-script.ttf\")\nshowtext::showtext_auto()\nxrange &lt;- range(as.numeric(pizza_season$month))\nyrange &lt;- range(pizza_season$n)\nratioxy &lt;- diff(xrange) / diff(yrange)\nx &lt;- 3\ny &lt;- 1180\nscale &lt;- 60\nn &lt;- 1\nmapman &lt;- ggplot2::aes(x, y, scale, ratioxy, angleofspine, anglerighthumerus, anglelefthumerus,\n              anglerightradius, angleleftradius, anglerightleg, angleleftleg, angleofneck)\ndataman &lt;- tibble::tibble(x = x, y = y,\n                          scale = scale,\n                          ratioxy = ratioxy,\n                          angleofspine = runif(n, -pi/2-pi/10, -pi/2+pi/10),\n                          anglerighthumerus = runif(n, -pi/6-pi/10, -pi/6+pi/10),\n                          anglelefthumerus = runif(n, pi+pi/6-pi/10, pi+pi/6+pi/10),\n                          anglerightradius =  runif(n, -pi/4, pi/4),\n                          angleleftradius =  runif(n, pi-pi/4, pi+pi/4),\n                          anglerightleg = runif(n, 3*pi/2+pi/12, 3*pi/2+pi/12+pi/10),\n                          angleleftleg = runif(n, 3*pi/2-pi/12-pi/10, 3*pi/2-pi/12),\n                          angleofneck = runif(n, -pi/2-pi/10, -pi/2+pi/10))\ndatatalk &lt;- tibble::tibble(xbegin = 4, ybegin = 1185, xend = 5, yend = 1215)\npizza_season %&gt;%\n  ggplot2::ggplot() +\n  ggplot2::geom_smooth(aes(x = month, y = n, group = type, linetype = type),\n                       color = \"black\", se = FALSE) +\n  ggplot2::labs(title = \"Pizza Season\", subtitle = \"2015\") +\n  ggplot2::theme_minimal() +\n  ggplot2::theme(text = element_text(family = \"xkcd Script\", size = 30)) +\n  ggplot2::annotate(\"text\", x = 6.5, y = 1215, label = \"The figures don't go\\noff the charts, so\\nwhat's the plot of this graph?\", family=\"xkcd Script\") +\n  xkcd::xkcdaxis(xrange, yrange) +\n  xkcd::xkcdman(mapman, dataman) +\n  xkcd::xkcdline(aes(x = xbegin, y = ybegin, xend = xend, yend = yend),\n           datatalk, xjitteramount = 0.4)\n\n\n\n\nSlide borrowed from Alexander Savi (2022)\nPackages: cowplot, firatheme, hrbrthemes (typography-centric themes), ggthemes (collection),and xkcd (dormant), ggpomological, tvthemes, wesanderson (color palettes)."
+  },
+  {
+    "objectID": "slides_class1.html#colors",
+    "href": "slides_class1.html#colors",
+    "title": "Data Visualization",
+    "section": "Colors",
+    "text": "Colors\n\n\n\n\nCode\nfig_season_2 +\n  ggplot2::scale_fill_viridis_d()\n\n\n\n\n\n\n\n\n\n\n\n\nCode\nfig_season_2 +\n  ggplot2::scale_fill_brewer(type = \"qual\")\n\n\n\n\n\n\n\n\n\n\n\nSlide borrowed from Alexander Savi (2022)\nFunctions: viridis (optimized for continuous data), colorbrewer (optimized for discrete data, includes sequential, diverging, and qualitative color scales).\nResources: viridis Color Maps for R, ColorBrewer 2.0."
+  },
+  {
+    "objectID": "slides_class1.html#color-blindness",
+    "href": "slides_class1.html#color-blindness",
+    "title": "Data Visualization",
+    "section": "Color blindness",
+    "text": "Color blindness\n\n\n\n\nCode\n# remotes::install_github(\"clauswilke/colorblindr\")\nlibrary(\"colorblindr\")\ncolorblindr::cvd_grid(fig_season_2)\n\n\n\n\n\n\n\n\n\n\n\n\nClaus Wilke\n\n\n\n\n\nCode\nlibrary(\"MetBrewer\")\nMetBrewer::colorblind_palettes\n\n\n [1] \"Archambault\" \"Cassatt1\"    \"Cassatt2\"    \"Demuth\"      \"Derain\"     \n [6] \"Egypt\"       \"Greek\"       \"Hiroshige\"   \"Hokusai2\"    \"Hokusai3\"   \n[11] \"Ingres\"      \"Isfahan1\"    \"Isfahan2\"    \"Java\"        \"Johnson\"    \n[16] \"Kandinsky\"   \"Morgenstern\" \"OKeeffe1\"    \"OKeeffe2\"    \"Pillement\"  \n[21] \"Tam\"         \"Troy\"        \"VanGogh3\"    \"Veronese\"   \n\n\nCode\nfig_season_2 + ggplot2::scale_fill_manual(values = MetBrewer::met.brewer(\"VanGogh3\", n = 4))\n\n\n\n\n\n\n\n\n\n\n\nSlide borrowed from Alexander Savi (2022)\nPackages: khroma (discrete data), viridis (continuous data), MetBrewer & rijkspalette, colorblindr, colorspace.\nResources: clauswilke.com, hclwizard.org."
+  },
+  {
+    "objectID": "slides_class1.html#color-accuracy",
+    "href": "slides_class1.html#color-accuracy",
+    "title": "Data Visualization",
+    "section": "Color accuracy",
+    "text": "Color accuracy\n\n\nPrint-proof, monitor/beamer-proof, colorblind-proof?\n\nUse grayscale (but color-coding is superior)\nUse a secondary aesthetic for color\nUse a viridis color map\n\n\n\n\nSource: benq.com\n\n\n\n\n\n\nSource: Savi et al. (2018)\n\n\n\n\nSlide borrowed from Alexander Savi (2022)\nResources: viridis Color Maps for R."
+  },
+  {
+    "objectID": "slides_class1.html#captions",
+    "href": "slides_class1.html#captions",
+    "title": "Data Visualization",
+    "section": "Captions",
+    "text": "Captions\n\n\nTitle Descriptive or declarative\nMethods Keep it brief\nResults If not (fully captured) in title\nDefinitions Colors, line types, error bars, etc.\nData source If external\n\n\n\n\nSource: sketch.es\n\n\n\n\nSlides borrowed from Alexander Savi (2022)\nResources: clauswilke.com, more, more, more."
+  },
+  {
+    "objectID": "slides_class1.html#typography",
+    "href": "slides_class1.html#typography",
+    "title": "Data Visualization",
+    "section": "Typography",
+    "text": "Typography\n\n\nLearn everything about typography.\nFind inspiration and recommendations.\nChoose a font for data visualizations.\nPick good font combinations.\nOr just use arial or helvetica.\n\n\n\nCode\nlibrary(\"showtext\")\nsysfonts::font_add_google(\"Press Start 2P\", \"2P\")\nshowtext::showtext_auto()\nfig_season_2 +\n  ggplot2::theme(text = element_text(family = \"2P\", size = 20))\n\n\n\n\n\n\n\n\n\n\n\nSlides borrowed from Alexander Savi (2022)\nPackages: showtext."
+  },
+  {
+    "objectID": "slides_class1.html#file-formatsize",
+    "href": "slides_class1.html#file-formatsize",
+    "title": "Data Visualization",
+    "section": "File format/size",
+    "text": "File format/size\n\n\n\nFile size: email attachment, webpage/image load time, compilation time\nFile format: resizing vector vs. bitmap/raster. For bitmap images, set the plot resolution: dpi = c(“retina”, “print”, “screen”)\n\n\nggplot2::ggsave(\"awesome_plot.png\",\n                width = 5,\n                height = 5,\n                units = \"cm\",\n                dpi = \"retina\")\n\n\n\n\n\nSource: clauswilke.com\n\n\n\n\nSlides borrowed from Alexander Savi (2022)\nEnlarge bitmap with AI (paid). Yes, you can save to .tex."
+  },
+  {
+    "objectID": "slides_class1.html#font-embedding",
+    "href": "slides_class1.html#font-embedding",
+    "title": "Data Visualization",
+    "section": "Font embedding",
+    "text": "Font embedding\nVector images pick the closest font available (if the actual font is not available on the recipients computer). You can embed fonts into the vector image.\n\nshowtext converts characters into polygons. Embedding is no longer required, but text is no longer searchable.\nextrafont supports font embedding, but supports fewer fonts.\n\nAdobe Acrobat (paid version) can be used to manually embed fonts in a PDF.\n\nSlides borrowed from Alexander Savi (2021)\nPackages: showtext, extrafont.\nShould color profiles also be embedded? Not sure, and not clear how R/ggplot2 handles this."
+  },
+  {
+    "objectID": "slides_class1.html#continue-learning",
+    "href": "slides_class1.html#continue-learning",
+    "title": "Data Visualization",
+    "section": "Continue learning",
+    "text": "Continue learning\n\n\nRTFM: ggplot2 Book\nViz types and examples: From Data to Viz, The R Graph Gallery, clauswilke.com\nExtensions: ggplot2 Extensions Gallery\nBooks: Fundamentals of Data Visualization\nNYT: What’s going on in this graph?\nData: Statistics Netherlands or data()\n#30DayChartChallenge\n\n\n\n\nSource: data-to-viz.com"
+  },
+  {
+    "objectID": "slides_class1.html#get-inspiration",
+    "href": "slides_class1.html#get-inspiration",
+    "title": "Data Visualization",
+    "section": "Get inspiration",
+    "text": "Get inspiration\n\n\nPodcasts: Data Stories, Explore Explain, Data Viz Today\nBlogs: FlowingData\nJournals: Nightingale\nComics: Matt-Heun Hong, Martin Telefont, Natalia Kiseleva\nGenerative art: Clause O. Wilke, Danielle Navarro, Thomas Lin Pedersen\nAwards: Information is Beautiful\nInteractive visualizations: R Psychologist\nExplorable explanations: Nicky Case, Setosa\n\n\n\n\nThomas Lin Pedersen"
+  },
+  {
+    "objectID": "slides_class1.html#interactive-viz",
+    "href": "slides_class1.html#interactive-viz",
+    "title": "Data Visualization",
+    "section": "Interactive viz",
+    "text": "Interactive viz\n\n\n\nsliderInput(\"bins\", \"Number of bins:\", \n            min = 1, max = 50, value = 30)\nplotOutput(\"distPlot\")\n\n\noutput$distPlot &lt;- renderPlot({\n  x &lt;- faithful[, 2]  # Old Faithful Geyser data\n  bins &lt;- seq(min(x), max(x), length.out = input$bins + 1)\n  hist(x, breaks = bins, col = 'darkgray', border = 'white')\n})\n\n\n\n\nShiny\n\n\n\nshiny builds interactive web apps\nggplotly converts ggplot2 figures into interactive figures\ngganimate includes animated elements to ggplot2 figures\nhtmlwidgets creates JavaScript visualization widgets\nflexdashboard creates interactive dashboards\nggvis (dormant)"
+  },
+  {
+    "objectID": "slides_class1.html#break-1",
+    "href": "slides_class1.html#break-1",
+    "title": "Data Visualization",
+    "section": "Break",
+    "text": "Break\n\nlibrary(\"RXKCD\")\nRXKCD::getXKCD(which = \"2476\")"
+  },
+  {
+    "objectID": "slides_class1.html#thats-up-to-you",
+    "href": "slides_class1.html#thats-up-to-you",
+    "title": "Data Visualization",
+    "section": "… that’s up to you! 🫵",
+    "text": "… that’s up to you! 🫵"
+  },
+  {
+    "objectID": "slides_class1.html#final-assignment",
+    "href": "slides_class1.html#final-assignment",
+    "title": "Data Visualization",
+    "section": "Final assignment",
+    "text": "Final assignment"
+  },
+  {
+    "objectID": "slides_class1.html#project-1",
+    "href": "slides_class1.html#project-1",
+    "title": "Data Visualization",
+    "section": "Project 1",
+    "text": "Project 1\nAbility development\n\nAudience: Teachers / Prowise team\nChanges in [score/ability] over [time/sessions/items] per [player/class/game/learning goal/time-period]\n\nProwise example: “How do first-time players improve in the first 10 sessions of the game [Verhaaltjes]?”\nTeacher example: “Which children are not showing the expected improvement?” [decline / stopped growth]"
+  },
+  {
+    "objectID": "slides_class1.html#project-2",
+    "href": "slides_class1.html#project-2",
+    "title": "Data Visualization",
+    "section": "Project 2",
+    "text": "Project 2\nTeacher dashboard\n\nAudience: Teachers\nMake an overview of the scores of children in a classroom, for instance:\n\nWhich games were played in the last [week/month]?\nHow much did they play?\nWhat are their ability scores?\n\nExample: Overview that helps teachers to start off the day\nExample: Overview that dives deeper into the scores of a [child/class]"
+  },
+  {
+    "objectID": "slides_class1.html#project-3",
+    "href": "slides_class1.html#project-3",
+    "title": "Data Visualization",
+    "section": "Project 3",
+    "text": "Project 3\nUser engagement\n\nAudience: Prowise team / Business Information\nCan behavioral patterns in the use of the system be identified? For example:\n\nHow many children play in our system per [week/month]? Any differences between the three applications [Math Garden, Language Sea, Words&Birds]?\nHow many items have been completed per domain and/or learning goal in a [week/month/year]?\nAre there differences in when children play [school hours, evening, weekend]?\nHow is the show coins/difficulty/question mark feature used?"
+  },
+  {
+    "objectID": "slides_class1.html#project-4",
+    "href": "slides_class1.html#project-4",
+    "title": "Data Visualization",
+    "section": "Project 4",
+    "text": "Project 4\nMotivation\n\nAudience: Teacher / Prowise team / Data Scientists or researchers\nPick one or two motivational variables and compute them from log record data.\n\nExamples of motivational metrics could be: [quitting, persistence, game / difficulty selection, number of items played per login], etc …\n\nAre there [between- / within- player] differences in motivation? For example:\n\nDo children differ in how many items they complete in a given session?\nDo children consistently play the same games?\nDoes difficulty level predict quitting?\n\nTeacher example: Which students are ‘highly’ or ‘poorly’ motivated/show undesired play behavior?\nResearcher example: Are motivation effects stable across [time/games/age groups]?"
+  },
+  {
+    "objectID": "slides_class1.html#project-5",
+    "href": "slides_class1.html#project-5",
+    "title": "Data Visualization",
+    "section": "Project 5",
+    "text": "Project 5\n\nAudience: Prowise team / Data scientist\nInvestigate the scores [expected / observed] per [item/user/groups] within psychometric models. For example:\n\nHow fast are the [expected_scores] converging to [observed_scores]? Show the relation with playing frequency\nDifferent categories of model misfits (e.g., discrepancies between [expected & observed scores per item/user]\nInvestigate item drift\n\n\n\n\n\n\n\n\n\nCover photo made in R by Danielle Navarro"
   }
 ]
