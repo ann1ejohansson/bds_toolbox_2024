@@ -278,12 +278,18 @@ We focus on explanatory data viz (also bridge to next). Beautiful plots!
 
 ![](images/colors.jpg){width="490"}
 
+::: footer
+:::
+
 
 ------------------------------------------------------------------------
 
 💬
 
 ![](images/all_elements_needed.jpeg){width="490"}
+
+::: footer
+:::
 
 
 ------------------------------------------------------------------------
@@ -292,12 +298,18 @@ We focus on explanatory data viz (also bridge to next). Beautiful plots!
 
 ![](images/axes_correct.jpeg){height="500"}
 
+::: footer
+:::
+
 
 ------------------------------------------------------------------------
 
 💬
 
 ![](images/stacked1.png)
+
+::: footer
+:::
 
 ------------------------------------------------------------------------
 
@@ -361,6 +373,8 @@ We focus on explanatory data viz (also bridge to next). Beautiful plots!
 
 ![](images/storytelling_before.png)
 
+::: footer
+:::
 
 ------------------------------------------------------------------------
 
