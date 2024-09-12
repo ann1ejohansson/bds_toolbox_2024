@@ -5,9 +5,17 @@ author: "<span style='color: white;'>Lecturers: Abe Hofman, Annie Johansson, Lil
 footer: "<span style='color: white;'>Cover photo made in R by <a href='https://art.djnavarro.net' style='color: pink; text-decoration: underline;'>Danielle Navarro</a></span>"
 format: 
   revealjs:
+    highlight-style: arrow
     theme: "white"
     logo: images/uva_logo.png
     css: styles.css
+    multiplex: true
+    preview-links: auto
+    progress: true
+    slide-number: true
+    show-slide-number: print
+    smaller: false
+    touch: true
 editor: visual
 title-slide-attributes:
   data-background-image: "images/coverphoto.jpg"
@@ -146,14 +154,20 @@ Data visualization assignments make up a total of 30% of your final BDS Toolbox 
 ![](images/why_viz1.png){width="400"}
 :::
 
+::: footer
+:::
+
 ## Why visualize data? 💬
-:::columns
-::: {.column width="50%"}
-![](images/bandjes.jpeg){width="500"}
-:::
-::: {.column width="50%"}
-![](images/bandjes2.jpeg){width="500"}
-:::
+::: {layout-ncol="2"}
+
+<a href="images/bandjes1.png" target="_blank">
+  <img src="images/bandjes1.png" width="500" dpi=1000 style="max-width: 100%;" />
+</a>
+
+<a href="images/bandjes2.png" target="_blank">
+  <img src="images/bandjes2.png" dpi=1000 width="500" style="max-width: 100%;" />
+</a>
+
 :::
 
 ::: footer
