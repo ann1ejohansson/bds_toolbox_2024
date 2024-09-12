@@ -146,11 +146,18 @@ Data visualization assignments make up a total of 30% of your final BDS Toolbox 
 ![](images/why_viz1.png){width="400"}
 :::
 
-------------------------------------------------------------------------
-![](images/bandjes.jpeg)
-![](images/bandjes2.jpeg)
+## Why visualize data? 💬
+:::columns
+::: {.column width="50%"}
+![](images/bandjes.jpeg){width="500"}
+:::
+::: {.column width="50%"}
+![](images/bandjes2.jpeg){width="500"}
+:::
+:::
 
-------------------------------------------------------------------------
+::: footer
+:::
 
 ## Anscombe's quartet {.smaller}
 
