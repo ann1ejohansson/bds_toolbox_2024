@@ -281,16 +281,65 @@ We focus on explanatory data viz (also bridge to next). Beautiful plots!
 
 💬
 
-![reddit.com/r/dataisugly](images/lidl.png){fig-align="left" width="500"}
+::: columns
+::: {.column width="60%"}
+![reddit.com/r/dataisugly](images/lidl.png){fig-align="left" height="500"}
+:::
+
+::: {.column width="40%"}
+::: fragment
+-   Misleading (or missing) information?
+-   Many data visualizations might have a hidden agenda, due to e.g. marketing strategies.
+:::
+:::
+:::
 
 ::: footer
+Check out the classic from Darrel Huff [How to Lie with Statistics](https://www.penguin.co.uk/books/13565/how-to-lie-with-statistics-by-darrell-huff-with-pictures-by-mel-calman/9780140136296) [Lessions from How to Lie with Statistics.](https://towardsdatascience.com/lessons-from-how-to-lie-with-statistics-57060c0d2f19)
 :::
 
 ------------------------------------------------------------------------
 
 💬
 
+::: columns
+::: {.column width="60%"}
 ![[Source: reddit.com/r/dataisbeautiful](https://www.reddit.com/r/dataisugly/)](images/data_ink.png){fig-align="left" width="544"}
+:::
+
+::: {.column width="40%"}
+::: fragment
+-   Data to ink ratio?
+:::
+:::
+:::
+
+::: footer
+[How to maximize the data-to-ink ratio](https://www.codeconquest.com/blog/data-ink-ratio-explained-with-example/)
+:::
+
+------------------------------------------------------------------------
+
+### Data to ink ratio
+
+::: columns
+::: {.column width="50%"}
+![](images/data_ink.png)
+:::
+
+::: {.column width="50%"}
+![](images/data_ink2.jpeg){height="500"}
+:::
+:::
+
+::: footer
+:::
+
+------------------------------------------------------------------------
+
+### Data to ink ratio
+
+![](images/treemap.png)
 
 ::: footer
 :::
@@ -299,7 +348,17 @@ We focus on explanatory data viz (also bridge to next). Beautiful plots!
 
 💬
 
+::: columns
+::: {.column width="60%"}
 ![](images/colors.jpg){width="490"}
+:::
+
+::: {.column width="40%"}
+::: fragment
+-   Do the colors make sense?
+:::
+:::
+:::
 
 ::: footer
 :::
@@ -308,7 +367,17 @@ We focus on explanatory data viz (also bridge to next). Beautiful plots!
 
 💬
 
+::: columns
+::: {.column width="60%"}
 ![](images/all_elements_needed.jpeg){width="490"}
+:::
+
+::: {.column width="40%"}
+::: fragment
+-   Are all elements needed?
+:::
+:::
+:::
 
 ::: footer
 :::
@@ -317,7 +386,34 @@ We focus on explanatory data viz (also bridge to next). Beautiful plots!
 
 💬
 
+::: columns
+::: {.column width="60%"}
 ![](images/axes_correct.jpeg){height="500"}
+:::
+
+::: {.column width="40%"}
+::: fragment
+-   Are the axes correct?
+:::
+:::
+:::
+
+::: footer
+:::
+
+------------------------------------------------------------------------
+
+### Are the axes correct?
+
+::: columns
+::: {.column width="60%"}
+![](images/ireland.png)
+:::
+
+::: {.column width="40%"}
+![](images/info_correct.jpeg)
+:::
+:::
 
 ::: footer
 :::
@@ -326,7 +422,17 @@ We focus on explanatory data viz (also bridge to next). Beautiful plots!
 
 💬
 
+::: columns
+::: {.column width="60%"}
 ![](images/stacked1.png)
+:::
+
+::: {.column width="40%"}
+::: fragment
+-   Is it simple?
+:::
+:::
+:::
 
 ::: footer
 :::
@@ -391,7 +497,24 @@ We focus on explanatory data viz (also bridge to next). Beautiful plots!
 
 💬
 
+::: columns
+::: {.column width="60%"}
 ![](images/storytelling_before.png)
+:::
+
+::: {.column width="40%"}
+::: fragment
+-   Does it support one conclusion?
+:::
+:::
+:::
+
+::: footer
+:::
+
+------------------------------------------------------------------------
+
+### Storytelling with data - show just one conclusion! ![](images/storytelling_after.png)
 
 ::: footer
 :::
@@ -402,6 +525,7 @@ We focus on explanatory data viz (also bridge to next). Beautiful plots!
 
 ::: footer
 :::
+
 
 ------------------------------------------------------------------------
 
