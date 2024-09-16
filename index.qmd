@@ -1292,6 +1292,7 @@ You are now the data scientist!
 :::
 
 ## Project 5
+### Psychometrics
 
 -   Audience: Prowise team / Data scientist
 
@@ -1317,3 +1318,6 @@ You are now the data scientist!
 +---------------------------------------+---------------------------------+-------------+-----------------+
 | Sunday, September 22nd 23:59          | Deadline: Data Vis Assignment 2 |             |                 |
 +---------------------------------------+---------------------------------+-------------+-----------------+
+
+:::footer
+:::
