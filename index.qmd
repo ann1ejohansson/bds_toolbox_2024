@@ -158,16 +158,11 @@ Data visualization assignments make up a total of 30% of your final BDS Toolbox 
 :::
 
 ## Why visualize data? 💬
+
 ::: {layout-ncol="2"}
+<a href="images/bandjes1.png" target="_blank"> <img src="images/bandjes1.png" width="500" dpi="1000" style="max-width: 100%;"/> </a>
 
-<a href="images/bandjes1.png" target="_blank">
-  <img src="images/bandjes1.png" width="500" dpi=1000 style="max-width: 100%;" />
-</a>
-
-<a href="images/bandjes2.png" target="_blank">
-  <img src="images/bandjes2.png" dpi=1000 width="500" style="max-width: 100%;" />
-</a>
-
+<a href="images/bandjes2.png" target="_blank"> <img src="images/bandjes2.png" dpi="1000" width="500" style="max-width: 100%;"/> </a>
 :::
 
 ::: footer
@@ -525,7 +520,6 @@ Check out the classic from Darrel Huff [How to Lie with Statistics](https://www.
 
 ::: footer
 :::
-
 
 ------------------------------------------------------------------------
 
@@ -1161,7 +1155,53 @@ RXKCD::getXKCD(which = "2476")
 ::: footer
 :::
 
-## Final assignment
+## Final assignment {.smaller .scrollable}
+
+You are now the data scientist!
+
+::: columns
+::: {.column width="50%"}
+#### Requirements
+
+-   Pitch your visualization to data scientists at Prowise Learn in a short presentation.
+
+-   Report, including:
+
+    -   Your visualization
+
+    -   1 page description explanaining your problem and visualization. Why is this the best way to visualize your data?
+
+    -   The code you used to produce the visualization.
+:::
+
+::: {.column width="50%"}
+![](images/dance.jpeg)
+:::
+:::
+
+#### Grading criteria
+
+-   Clear description (1 page)
+
+-   Aesthetic quality (is it pretty, clear, simple?)
+
+-   Communicative quality (does it communicate what you intend it to communicate?)
+
+-   Code quality and styling
+
+-   Creativity and complexity
+
+#### Outlook
+
++-----------------------------------------------+---------------------------+--------------------------+
+| When                                          | What                      | Where                    |
++===============================================+===========================+==========================+
+| Friday, October 11th, 12:00 - 15:00           | Q&A session               | REC E0.15                |
++-----------------------------------------------+---------------------------+--------------------------+
+| Sunday, October 13th, 23:59                   | Deadline final assignment |                          |
++-----------------------------------------------+---------------------------+--------------------------+
+| Tuesday, October 15th, 15:00 - 18:00          | Presentations             | REC-IMPACT (JK building) |
++-----------------------------------------------+---------------------------+--------------------------+
 
 ::: footer
 :::
@@ -1257,3 +1297,15 @@ RXKCD::getXKCD(which = "2476")
 
 ::: footer
 :::
+
+## What's next? ⏭️
+
++---------------------------------------+---------------------------------+-------------+-----------------+
+| When                                  | What                            | Who         | Material        |
++=======================================+=================================+=============+=================+
+| Friday, September 20th 12:00 - 15:00  | Session 6: Consultancy          | Robert, Abe | CRISP-DM Manual |
+|                                       |                                 |             |                 |
+|                                       | Interview Skills                |             |                 |
++---------------------------------------+---------------------------------+-------------+-----------------+
+| Sunday, September 22nd 23:59          | Deadline: Data Vis Assignment 2 |             |                 |
++---------------------------------------+---------------------------------+-------------+-----------------+

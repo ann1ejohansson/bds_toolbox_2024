@@ -18,11 +18,11 @@
 /* Make text within square brackets blue */
 span.bracketed::before, span.bracketed::after {
     content: "";
-    color: blue;
+    background-color: lightblue;
 }
 
 span.bracketed {
-    color: blue;
+    background-color: lightblue;
 }
 
 /* Library/CloudStorage/OneDrive-UvA/2024-2025/BDS Toolbox/Quarto/slides_dataviz.qmd

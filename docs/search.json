@@ -235,7 +235,7 @@
     "href": "index.html#final-assignment",
     "title": "Data Visualization",
     "section": "Final assignment",
-    "text": "Final assignment"
+    "text": "Final assignment\nYou are now the data scientist!\n\n\nRequirements\n\nPitch your visualization to data scientists at Prowise Learn in a short presentation.\nReport, including:\n\nYour visualization\n1 page description explanaining your problem and visualization. Why is this the best way to visualize your data?\nThe code you used to produce the visualization.\n\n\n\n\n\nGrading criteria\n\nClear description (1 page)\nAesthetic quality (is it pretty, clear, simple?)\nCommunicative quality (does it communicate what you intend it to communicate?)\nCode quality and styling\nCreativity and complexity\n\nOutlook\n\n\n\n\n\n\n\n\nWhen\nWhat\nWhere\n\n\n\n\nFriday, October 11th, 12:00 - 15:00\nQ&A session\nREC E0.15\n\n\nSunday, October 13th, 23:59\nDeadline final assignment\n\n\n\nTuesday, October 15th, 15:00 - 18:00\nPresentations\nREC-IMPACT (JK building)"
   },
   {
     "objectID": "index.html#project-1",
@@ -270,7 +270,14 @@
     "href": "index.html#project-5",
     "title": "Data Visualization",
     "section": "Project 5",
-    "text": "Project 5\n\nAudience: Prowise team / Data scientist\nInvestigate the scores [expected / observed] per [item/user/groups] within psychometric models. For example:\n\nHow fast are the [expected_scores] converging to [observed_scores]? Show the relation with playing frequency\nDifferent categories of model misfits (e.g., discrepancies between [expected & observed scores per item/user]\nInvestigate item drift\n\n\n\n\n\n\n\n\n\nCover photo made in R by Danielle Navarro"
+    "text": "Project 5\n\nAudience: Prowise team / Data scientist\nInvestigate the scores [expected / observed] per [item/user/groups] within psychometric models. For example:\n\nHow fast are the [expected_scores] converging to [observed_scores]? Show the relation with playing frequency\nDifferent categories of model misfits (e.g., discrepancies between [expected & observed scores per item/user]\nInvestigate item drift"
+  },
+  {
+    "objectID": "index.html#whats-next",
+    "href": "index.html#whats-next",
+    "title": "Data Visualization",
+    "section": "What’s next? ⏭️",
+    "text": "What’s next? ⏭️\n\n\n\n\n\n\n\n\n\nWhen\nWhat\nWho\nMaterial\n\n\n\n\nFriday, September 20th 12:00 - 15:00\nSession 6: Consultancy\nInterview Skills\nRobert, Abe\nCRISP-DM Manual\n\n\nSunday, September 22nd 23:59\nDeadline: Data Vis Assignment 2\n\n\n\n\n\n\n\n\n\nCover photo made in R by Danielle Navarro"
   },
   {
     "objectID": "slides_class1.html#content",
