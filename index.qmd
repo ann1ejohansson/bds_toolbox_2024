@@ -720,6 +720,14 @@ Work on:
 ::: footer
 :::
 
+## Your good examples!
+
+Tips: 
+Keep it simple: only different colors if they correspond to a feature in the data
+Ordering. 
+Readable axis text
+
+
 ## Recap
 
 ::: columns
