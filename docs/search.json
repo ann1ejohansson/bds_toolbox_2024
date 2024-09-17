@@ -126,11 +126,11 @@
     "text": "Today\n\n\n📊 More (your) good examples\n✨ More data visualization features\n📝 Introduction to final project\n\nWork on:\n✏️ Brainstorm ideas for final project\n✏️ Data viz assignment 2"
   },
   {
-    "objectID": "index.html#your-good-examples",
-    "href": "index.html#your-good-examples",
+    "objectID": "index.html#the-good",
+    "href": "index.html#the-good",
     "title": "Data Visualization",
-    "section": "Your good examples!",
-    "text": "Your good examples!\n\n\n\n\nCode\ndata %&gt;%\n  ggplot(aes(x = reorder(as.character(id), login_count), y = login_count)) +\n  geom_bar(stat = \"identity\", fill = \"#A899FF\") +\n  geom_hline(aes(\n    yintercept = mean(login_count, na.rm = TRUE),\n    linetype = \"Mean\"\n  ),\n  color = \"#21218E\",\n  size = 1) +\n  labs(title = \"Login Count by User\",\n       x = \"User ID\",\n       y = \"Login Count\") +\n  theme_minimal() +\n  theme(axis.text.x = element_text(angle = 45, hjust = 1),\n        plot.title = element_text(hjust = 0.5)) +\n  scale_linetype_manual(values = c(\"Mean\" = \"dashed\"))\n\n\n\n\n\nCode\ndata %&gt;%\n  ggplot(aes(x = reorder(as.factor(id), login_count), y = login_count)) + \n  # fixate x and y axes, order student id by student count so plot is ordered\n  geom_point(size = 5, color = \"darkred\") +\n  geom_segment(aes(xend = as.factor(id), yend = 0), color = \"darkred\") +\n  # red lines + dots representing login frequency per student id\n  coord_flip() + \n  # flip the chart\n  labs(title = \"Login Counts of Students in Class 3\", \n       x = \"Student ID\", \n       y = \"Number of Logins\") +\n  # cleanup for aesthetic purposes\n  theme_minimal(base_size = 14) +\n  theme(\n    text = element_text(family = \"Georgia\", color = \"black\"),\n    plot.title = element_text(size = 16, face = \"bold\", margin = margin(b = 15)),  \n    # adding space below the title, bold and big title\n    axis.title.x = element_text(size = 12, margin = margin(t = 10)),  \n    # adding space above x-axis label\n    axis.title.y = element_text(size = 12, margin = margin(r = 10)),  \n    # adding space to the right of y-axis label\n    axis.text = element_text(size = 10)\n  )\n\n\n\n\n\nCode\nmy_data %&gt;%\n  mutate(id = fct_reorder(as.factor(id), login_count)) %&gt;%\n  ggplot(aes(x = id, y = login_count, fill = login_count)) +\n  coord_flip() +\n  geom_col(width = 0.7, color = \"white\") +\n  scale_fill_gradientn(\n    colors = c(\"tomato\", \"gold\", \"forestgreen\"),\n    breaks = c(\n      min(my_data$login_count),\n      mean(my_data$login_count), max(my_data$login_count)\n    ),\n    labels = c(\"Fewer Logins\", \"Average Logins\", \"More Logins\")\n  ) +\n  labs(\n    x = \"User\",\n    y = \"Number of Logins\",\n    title = \"User Login Frequency\",\n    fill = \"Number of Logins\"\n  ) +\n  theme_minimal() +\n  theme(\n    plot.title = element_text(hjust = 0.5, size = 18),\n    axis.title.y = element_text(angle = 0, vjust = 0.5),\n    axis.title.x = element_text(vjust = -0.5)\n  )\n\n\n\n\n\n\nCode\ndata %&gt;%\n ggplot(aes(x = fct_reorder(as.factor(id), login_count), y = login_count)) +  geom_bar(stat = \"identity\", color = \"black\", fill = \"gray\") +  \n  labs(title = \"Login Counts per User\", x = \"User ID\", y = \"Login Counts\") + \n  theme_minimal() +  \n  theme(\n    axis.text.x = element_text(angle = 45, hjust = 1),  # Rotate x-axis labels to 45 degrees\n    legend.position = \"none\"  # Remove legend since it's unnecessary\n  )\n\n\n\n\n\nCode\ndata %&gt;%\n  arrange(desc(login_count)) %&gt;%\n  ggplot(aes(\n    x = reorder(as.factor(id), login_count),\n    y = login_count,\n    fill = factor(new_school_id)\n  )) +\n  geom_col() +\n  labs(title = \"Login Counts by User ID\", x = \"User ID\", y = \"Login Count\") +\n  theme_minimal() + \n  theme(axis.text.x = element_text(angle = 45, hjust = 1))\n\n\n\n\n\nCode\nlibrary(\"cowplot\")\nfig_season_1 +\n  cowplot::theme_cowplot()"
+    "section": "The good",
+    "text": "The good\n\n\n\n\nCode\ndata %&gt;%\n  ggplot(aes(x = reorder(as.character(id), login_count), y = login_count)) +\n  geom_bar(stat = \"identity\", fill = \"#A899FF\") +\n  geom_hline(aes(\n    yintercept = mean(login_count, na.rm = TRUE),\n    linetype = \"Mean\"\n  ),\n  color = \"#21218E\",\n  size = 1) +\n  labs(title = \"Login Count by User\",\n       x = \"User ID\",\n       y = \"Login Count\") +\n  theme_minimal() +\n  theme(axis.text.x = element_text(angle = 45, hjust = 1),\n        plot.title = element_text(hjust = 0.5)) +\n  scale_linetype_manual(values = c(\"Mean\" = \"dashed\"))\n\n\n\n\n\nCode\ndata %&gt;%\n  ggplot(aes(x = reorder(as.factor(id), login_count), y = login_count)) + \n  # fixate x and y axes, order student id by student count so plot is ordered\n  geom_point(size = 5, color = \"darkred\") +\n  geom_segment(aes(xend = as.factor(id), yend = 0), color = \"darkred\") +\n  # red lines + dots representing login frequency per student id\n  coord_flip() + \n  # flip the chart\n  labs(title = \"Login Counts of Students in Class 3\", \n       x = \"Student ID\", \n       y = \"Number of Logins\") +\n  # cleanup for aesthetic purposes\n  theme_minimal(base_size = 14) +\n  theme(\n    text = element_text(family = \"Georgia\", color = \"black\"),\n    plot.title = element_text(size = 16, face = \"bold\", margin = margin(b = 15)),  \n    # adding space below the title, bold and big title\n    axis.title.x = element_text(size = 12, margin = margin(t = 10)),  \n    # adding space above x-axis label\n    axis.title.y = element_text(size = 12, margin = margin(r = 10)),  \n    # adding space to the right of y-axis label\n    axis.text = element_text(size = 10)\n  )\n\n\n\n\n\nCode\nmy_data %&gt;%\n  mutate(id = fct_reorder(as.factor(id), login_count)) %&gt;%\n  ggplot(aes(x = id, y = login_count, fill = login_count)) +\n  coord_flip() +\n  geom_col(width = 0.7, color = \"white\") +\n  scale_fill_gradientn(\n    colors = c(\"tomato\", \"gold\", \"forestgreen\"),\n    breaks = c(\n      min(my_data$login_count),\n      mean(my_data$login_count), max(my_data$login_count)\n    ),\n    labels = c(\"Fewer Logins\", \"Average Logins\", \"More Logins\")\n  ) +\n  labs(\n    x = \"User\",\n    y = \"Number of Logins\",\n    title = \"User Login Frequency\",\n    fill = \"Number of Logins\"\n  ) +\n  theme_minimal() +\n  theme(\n    plot.title = element_text(hjust = 0.5, size = 18),\n    axis.title.y = element_text(angle = 0, vjust = 0.5),\n    axis.title.x = element_text(vjust = -0.5)\n  )\n\n\n\n\n\n\nCode\ndata %&gt;%\n ggplot(aes(x = fct_reorder(as.factor(id), login_count), y = login_count)) +  geom_bar(stat = \"identity\", color = \"black\", fill = \"gray\") +  \n  labs(title = \"Login Counts per User\", x = \"User ID\", y = \"Login Counts\") + \n  theme_minimal() +  \n  theme(\n    axis.text.x = element_text(angle = 45, hjust = 1),  # Rotate x-axis labels to 45 degrees\n    legend.position = \"none\"  # Remove legend since it's unnecessary\n  )\n\n\n\n\n\nCode\ndata %&gt;%\n  arrange(desc(login_count)) %&gt;%\n  ggplot(aes(\n    x = reorder(as.factor(id), login_count),\n    y = login_count,\n    fill = factor(new_school_id)\n  )) +\n  geom_col() +\n  labs(title = \"Login Counts by User ID\", x = \"User ID\", y = \"Login Count\") +\n  theme_minimal() + \n  theme(axis.text.x = element_text(angle = 45, hjust = 1))\n\n\n\n\n\nCode\nA &lt;-\n  ggplot(data, aes(x = reorder(id, login_count), y = login_count)) +\n  #Create a bar plot with light blue bars\n  geom_bar(stat = \"identity\", fill = \"lightblue\") +\n  # Add titles and labels for axes\n  labs(title = \"Login Counts of Children in Class 3 on Oefenweb\",\n       x = \"Player ID\",\n       y = \"Login Count\") +\n\n  # Customize the theme for a clean appearance\n  theme(\n    panel.background = element_rect(\n      fill = \"white\",\n      colour = \"darkgrey\",\n      size = 0.5\n    ),\n    # Thin grey outer grid\n    plot.background = element_rect(fill = \"white\"),\n    # White plot background\n    panel.grid.major = element_blank(),\n    # Remove major gridlines\n    panel.grid.minor = element_blank(),\n    # Remove minor gridlines\n    axis.line = element_line(colour = \"darkgrey\", size = 0.5),\n    # Thin dark grey axis lines\n    axis.line.x = element_line(colour = \"darkgrey\", size = 0.5),\n    # X-axis line\n    axis.line.y = element_line(colour = \"darkgrey\", size = 0.5),\n    # Y-axis line\n    axis.text.x = element_text(angle = 45, hjust = 1)\n  ) +  # Rotate x-axis labels for readability\n\n  # Remove the legend for fill (since it's not needed)\n  guides(fill = \"none\")\nprint(A)"
   },
   {
     "objectID": "index.html#tips-from-assignment-1",
@@ -140,11 +140,25 @@
     "text": "Tips from Assignment 1\n\n\nMatch colors to one feature\nOrdering helps\nMake axis text readable"
   },
   {
-    "objectID": "index.html#section",
-    "href": "index.html#section",
+    "objectID": "index.html#the-bad",
+    "href": "index.html#the-bad",
     "title": "Data Visualization",
-    "section": "💩💩💩💩💩💩💩💩💩💩💩💩💩💩💩💩",
-    "text": "💩💩💩💩💩💩💩💩💩💩💩💩💩💩💩💩\n\n\n  \n\n ]"
+    "section": "The bad",
+    "text": "The bad\n\n\n \n\n ]"
+  },
+  {
+    "objectID": "index.html#the-ugly",
+    "href": "index.html#the-ugly",
+    "title": "Data Visualization",
+    "section": "The ugly",
+    "text": "The ugly\n\n\n  \n\n ]"
+  },
+  {
+    "objectID": "index.html#handing-in-your-assignment",
+    "href": "index.html#handing-in-your-assignment",
+    "title": "Data Visualization",
+    "section": "Handing in your assignment",
+    "text": "Handing in your assignment\n\nCompile everything.\nSame group - same plot and code!\nHand in one version of your plot.\nIf you are late: you have one more day (max grade is 6), otherwise insufficient.\nRun the lintr and resolve the issue. (We don’t want to see your errors!)"
   },
   {
     "objectID": "index.html#recap",
@@ -238,13 +252,6 @@
     "text": "Interactive viz\n\n\n\nsliderInput(\"bins\", \"Number of bins:\", \n            min = 1, max = 50, value = 30)\nplotOutput(\"distPlot\")\n\n\noutput$distPlot &lt;- renderPlot({\n  x &lt;- faithful[, 2]  # Old Faithful Geyser data\n  bins &lt;- seq(min(x), max(x), length.out = input$bins + 1)\n  hist(x, breaks = bins, col = 'darkgray', border = 'white')\n})\n\n\n\n\nShiny\n\n\n\nshiny builds interactive web apps\nggplotly converts ggplot2 figures into interactive figures\ngganimate includes animated elements to ggplot2 figures\nhtmlwidgets creates JavaScript visualization widgets\nflexdashboard creates interactive dashboards\nggvis (dormant)"
   },
   {
-    "objectID": "index.html#break-1",
-    "href": "index.html#break-1",
-    "title": "Data Visualization",
-    "section": "Break",
-    "text": "Break\n\nlibrary(\"RXKCD\")\nRXKCD::getXKCD(which = \"2476\")"
-  },
-  {
     "objectID": "index.html#thats-up-to-you",
     "href": "index.html#thats-up-to-you",
     "title": "Data Visualization",
@@ -256,7 +263,7 @@
     "href": "index.html#final-assignment",
     "title": "Data Visualization",
     "section": "Final assignment",
-    "text": "Final assignment\nYou are now the data scientist!\n\n\nRequirements\n\nPitch your visualization to data scientists at Prowise Learn in a short presentation.\nReport, including:\n\nYour visualization\n1 page description explanaining your problem and visualization. Why is this the best way to visualize your data?\nThe code you used to produce the visualization.\n\n\n\n\n\nGrading criteria\n\nClear description (1 page)\nAesthetic quality (is it pretty, clear, simple?)\nCommunicative quality (does it communicate what you intend it to communicate?)\nCode quality and styling\nCreativity and complexity\n\nOutlook\n\n\n\n\n\n\n\n\nWhen\nWhat\nWhere\n\n\n\n\nFriday, October 11th, 12:00 - 15:00\nQ&A session\nREC E0.15\n\n\nSunday, October 13th, 23:59\nDeadline final assignment\n\n\n\nTuesday, October 15th, 15:00 - 18:00\nPresentations\nREC-IMPACT (JK building)"
+    "text": "Final assignment\nYou are now the data scientist!\n\n\nRequirements\n\nPitch your visualization to the Prowise Learn team (4 minutes).\n\nHand in your presentation slides.\n\nReport, including:\n\nYour visualization\n1 page description explanaining your problem and visualization: What did you want to communicate? Why is this the best way to visualize your data? What can you conclude?\nThe code you used to produce the visualization.\n\n\n\n\n\nGrading criteria\n\n20% Pitch\n20% Aesthetic quality (is it pretty, clear, simple?)\n20% Communicative quality (does it communicate what you intend it to communicate? / Think of your audience)\n20% page description\n10% Code quality and styling\n10% Creativity and complexity\n\nOutlook\n\n\n\n\n\n\n\n\nWhen\nWhat\nWhere\n\n\n\n\nFriday, October 11th, 12:00 - 15:00\nQ&A session\nREC E0.15\n\n\nSunday, October 13th, 23:59\nDeadline final assignment\n\n\n\nTuesday, October 15th, 15:00 - 18:00\nPresentations\nREC-IMPACT (JK building)"
   },
   {
     "objectID": "index.html#project-1",
@@ -294,11 +301,25 @@
     "text": "Project 5\nPsychometrics\n\nAudience: Prowise team / Data scientist\nInvestigate the scores [expected / observed] per [item/user/groups] within psychometric models. For example:\n\nHow fast are the [expected_scores] converging to [observed_scores]? Show the relation with playing frequency\nDifferent categories of model misfits (e.g., discrepancies between [expected & observed scores per item/user]\nInvestigate item drift"
   },
   {
+    "objectID": "index.html#break-1",
+    "href": "index.html#break-1",
+    "title": "Data Visualization",
+    "section": "Break",
+    "text": "Break\nIndicate your project preference"
+  },
+  {
     "objectID": "index.html#whats-next",
     "href": "index.html#whats-next",
     "title": "Data Visualization",
     "section": "What’s next? ⏭️",
-    "text": "What’s next? ⏭️\n\n\n\n\n\n\n\n\n\nWhen\nWhat\nWho\nMaterial\n\n\n\n\nFriday, September 20th 12:00 - 15:00\nSession 6: Consultancy\nInterview Skills\nRobert, Abe\nCRISP-DM Manual\n\n\nSunday, September 22nd 23:59\nDeadline: Data Vis Assignment 2\n\n\n\n\n\n\n\n\n\n\n\n\nCover photo made in R by Danielle Navarro"
+    "text": "What’s next? ⏭️\n\n\n\n\n\n\n\n\n\nWhen\nWhat\nWho\nMaterial\n\n\n\n\nFriday, September 20th 12:00 - 15:00\nSession 6: Consultancy\nInterview Skills\nRobert, Abe\nCRISP-DM Manual\n\n\nSunday, September 22nd 23:59\nDeadline: Data Vis Assignment 2"
+  },
+  {
+    "objectID": "index.html#own-work-1",
+    "href": "index.html#own-work-1",
+    "title": "Data Visualization",
+    "section": "📝 Own work",
+    "text": "📝 Own work\n\n\n\n\n\n\n\n\n\n\n\nAssignment\nContent\nMaterials\nDeadline\n\n\n\n\nData Visualization Assignment 2\n[Group] Brainstorm final project\n[Individual] Copy this plot\nLecture slides\n[Read] DV Book ch. 3.7, 4.3, 5.3, 5.5, 5.6, 6.0, 6.1, 6.2, 8.1, 8.2, 8.3\n[Watch videos] Themes; Recycling Themes; Trend lines / Stats; Color scheme; Multiple plots; Facets; Saving plots\nSunday, September 22nd, 23.59\n\n\n\n\n\n\n\n\n\n\n\n\n\nCover photo made in R by Danielle Navarro"
   },
   {
     "objectID": "slides_class1.html#content",

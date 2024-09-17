@@ -720,7 +720,7 @@ Work on:
 ::: footer
 :::
 
-## Your good examples! {.scrollable}
+## The good {.scrollable}
 
 ::: columns
 ::: {.column width="50%"}
@@ -853,9 +853,41 @@ data %>%
 #| echo: true
 #| eval: false
 #| code-fold: true
-library("cowplot")
-fig_season_1 +
-  cowplot::theme_cowplot()
+A <-
+  ggplot(data, aes(x = reorder(id, login_count), y = login_count)) +
+  #Create a bar plot with light blue bars
+  geom_bar(stat = "identity", fill = "lightblue") +
+  # Add titles and labels for axes
+  labs(title = "Login Counts of Children in Class 3 on Oefenweb",
+       x = "Player ID",
+       y = "Login Count") +
+
+  # Customize the theme for a clean appearance
+  theme(
+    panel.background = element_rect(
+      fill = "white",
+      colour = "darkgrey",
+      size = 0.5
+    ),
+    # Thin grey outer grid
+    plot.background = element_rect(fill = "white"),
+    # White plot background
+    panel.grid.major = element_blank(),
+    # Remove major gridlines
+    panel.grid.minor = element_blank(),
+    # Remove minor gridlines
+    axis.line = element_line(colour = "darkgrey", size = 0.5),
+    # Thin dark grey axis lines
+    axis.line.x = element_line(colour = "darkgrey", size = 0.5),
+    # X-axis line
+    axis.line.y = element_line(colour = "darkgrey", size = 0.5),
+    # Y-axis line
+    axis.text.x = element_text(angle = 45, hjust = 1)
+  ) +  # Rotate x-axis labels for readability
+
+  # Remove the legend for fill (since it's not needed)
+  guides(fill = "none")
+print(A)
 ```
 
 ![](images/student_good6.jpeg)
@@ -890,23 +922,49 @@ fig_season_1 +
 ::: footer
 :::
 
-## 💩💩💩💩💩💩💩💩💩💩💩💩💩💩💩💩 {.scrollable}
+## The bad {.scrollable}
 
 ::: columns
 ::: {.column width="50%"}
-![](images/student_bad1.png)
-![](images/student_bad2.png)
-![](images/student_bad3.png)
+![](images/student_bad1.png) ![](images/student_bad2.jpeg)
 :::
 
 ::: {.column width="50%"}
-![](images/student_bad4.png)
-![](images/student_bad5.png)]
-![](images/student_bad6.png)
+![](images/student_bad3.jpeg) ![](images/student_bad4.jpeg)\]
 :::
 :::
 
-:::footer
+::: footer
+:::
+
+## The ugly {.scrollable}
+
+::: columns
+::: {.column width="50%"}
+![](images/student_ugly1.png) ![](images/student_ugly2.png) ![](images/student_ugly3.png)
+:::
+
+::: {.column width="50%"}
+![](images/student_ugly4.png) ![](images/student_ugly5.png)\] ![](images/student_ugly6.png)
+:::
+:::
+
+::: footer
+:::
+
+## Handing in your assignment
+
+-   Compile everything.
+
+-   Same group - same plot and code!
+
+-   Hand in **one** version of your plot.
+
+-   If you are late: you have one more day (max grade is 6), otherwise insufficient.
+
+-   Run the lintr and **resolve** the issue. (We don't want to see your errors!)
+
+::: footer
 :::
 
 ## Recap
@@ -1322,18 +1380,6 @@ output$distPlot <- renderPlot({
 ::: footer
 :::
 
-## Break
-
-```{r}
-#| echo: true
-#| results: false
-library("RXKCD")
-RXKCD::getXKCD(which = "2476")
-```
-
-::: footer
-:::
-
 # Best plots 🥇 {background-color="#8000FF"}
 
 ::: footer
@@ -1352,13 +1398,15 @@ You are now the data scientist!
 ::: {.column width="50%"}
 #### Requirements
 
--   Pitch your visualization to data scientists at Prowise Learn in a short presentation.
+-   Pitch your visualization to the Prowise Learn team (4 minutes).
+
+    -   Hand in your presentation slides.
 
 -   Report, including:
 
     -   Your visualization
 
-    -   1 page description explanaining your problem and visualization. Why is this the best way to visualize your data?
+    -   1 page description explanaining your problem and visualization: What did you want to communicate? Why is this the best way to visualize your data? What can you conclude?
 
     -   The code you used to produce the visualization.
 :::
@@ -1370,15 +1418,17 @@ You are now the data scientist!
 
 #### Grading criteria
 
--   Clear description (1 page)
+-   20% Pitch
 
--   Aesthetic quality (is it pretty, clear, simple?)
+-   20% Aesthetic quality (is it pretty, clear, simple?)
 
--   Communicative quality (does it communicate what you intend it to communicate?)
+-   20% Communicative quality (does it communicate what you intend it to communicate? / Think of your audience)
 
--   Code quality and styling
+-   20% page description
 
--   Creativity and complexity
+-   10% Code quality and styling
+
+-   10% Creativity and complexity
 
 #### Outlook
 
@@ -1395,7 +1445,7 @@ You are now the data scientist!
 ::: footer
 :::
 
-## Project 1
+## Project 1 {.smaller}
 
 ### Ability development
 
@@ -1407,7 +1457,7 @@ You are now the data scientist!
 ::: footer
 :::
 
-## Project 2
+## Project 2 {.smaller}
 
 ### Teacher dashboard
 
@@ -1428,7 +1478,7 @@ You are now the data scientist!
 ::: footer
 :::
 
-## Project 3
+## Project 3 {.smaller}
 
 ### User engagement
 
@@ -1447,7 +1497,7 @@ You are now the data scientist!
 ::: footer
 :::
 
-## Project 4
+## Project 4 {.smaller}
 
 ### Motivation
 
@@ -1472,7 +1522,7 @@ You are now the data scientist!
 ::: footer
 :::
 
-## Project 5
+## Project 5 {.smaller}
 
 ### Psychometrics
 
@@ -1489,6 +1539,20 @@ You are now the data scientist!
 ::: footer
 :::
 
+## Break
+
+[[Indicate your project preference]{.underline}](https://docs.google.com/spreadsheets/d/1uqS1WaaLwb7F-66zmwDO9YWb8l52W6yYMwcnXyC1yhk/edit?gid=1909891562#gid=1909891562)
+
+```{r}
+#| code-fold: true
+#| results: false
+library("RXKCD")
+RXKCD::getXKCD(which = "2476")
+```
+
+::: footer
+:::
+
 ## What's next? ⏭️
 
 +--------------------------------------+---------------------------------+-------------+-----------------+
@@ -1500,6 +1564,29 @@ You are now the data scientist!
 +--------------------------------------+---------------------------------+-------------+-----------------+
 | Sunday, September 22nd 23:59         | Deadline: Data Vis Assignment 2 |             |                 |
 +--------------------------------------+---------------------------------+-------------+-----------------+
+
+::: footer
+:::
+
+## 📝 Own work {.smaller .scrollable}
+
+::: columns
+::: {.column width="80%"}
++-------------------------------------+------------------------------------+--------------------------------------------------------------------------------------------------------------------+-------------------------------+
+| Assignment                          | Content                            | Materials                                                                                                          | Deadline                      |
++=====================================+====================================+====================================================================================================================+===============================+
+| **Data Visualization Assignment 2** | \[Group\] Brainstorm final project | Lecture slides                                                                                                     | Sunday, September 22nd, 23.59 |
+|                                     |                                    |                                                                                                                    |                               |
+|                                     | \[Individual\] Copy this plot      | \[Read\] DV Book ch. 3.7, 4.3, 5.3, 5.5, 5.6, 6.0, 6.1, 6.2, 8.1, 8.2, 8.3                                         |                               |
+|                                     |                                    |                                                                                                                    |                               |
+|                                     |                                    | \[Watch videos\] Themes; Recycling Themes; Trend lines / Stats; Color scheme; Multiple plots; Facets; Saving plots |                               |
++-------------------------------------+------------------------------------+--------------------------------------------------------------------------------------------------------------------+-------------------------------+
+:::
+
+::: {.column width="20%"}
+![](images/better_graph_meme.png)
+:::
+:::
 
 ::: footer
 :::
