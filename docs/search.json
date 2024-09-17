@@ -130,7 +130,21 @@
     "href": "index.html#your-good-examples",
     "title": "Data Visualization",
     "section": "Your good examples!",
-    "text": "Your good examples!\nTips: Keep it simple: only different colors if they correspond to a feature in the data Ordering. Readable axis text"
+    "text": "Your good examples!\n\n\n\n\nCode\ndata %&gt;%\n  ggplot(aes(x = reorder(as.character(id), login_count), y = login_count)) +\n  geom_bar(stat = \"identity\", fill = \"#A899FF\") +\n  geom_hline(aes(\n    yintercept = mean(login_count, na.rm = TRUE),\n    linetype = \"Mean\"\n  ),\n  color = \"#21218E\",\n  size = 1) +\n  labs(title = \"Login Count by User\",\n       x = \"User ID\",\n       y = \"Login Count\") +\n  theme_minimal() +\n  theme(axis.text.x = element_text(angle = 45, hjust = 1),\n        plot.title = element_text(hjust = 0.5)) +\n  scale_linetype_manual(values = c(\"Mean\" = \"dashed\"))\n\n\n\n\n\nCode\ndata %&gt;%\n  ggplot(aes(x = reorder(as.factor(id), login_count), y = login_count)) + \n  # fixate x and y axes, order student id by student count so plot is ordered\n  geom_point(size = 5, color = \"darkred\") +\n  geom_segment(aes(xend = as.factor(id), yend = 0), color = \"darkred\") +\n  # red lines + dots representing login frequency per student id\n  coord_flip() + \n  # flip the chart\n  labs(title = \"Login Counts of Students in Class 3\", \n       x = \"Student ID\", \n       y = \"Number of Logins\") +\n  # cleanup for aesthetic purposes\n  theme_minimal(base_size = 14) +\n  theme(\n    text = element_text(family = \"Georgia\", color = \"black\"),\n    plot.title = element_text(size = 16, face = \"bold\", margin = margin(b = 15)),  \n    # adding space below the title, bold and big title\n    axis.title.x = element_text(size = 12, margin = margin(t = 10)),  \n    # adding space above x-axis label\n    axis.title.y = element_text(size = 12, margin = margin(r = 10)),  \n    # adding space to the right of y-axis label\n    axis.text = element_text(size = 10)\n  )\n\n\n\n\n\nCode\nmy_data %&gt;%\n  mutate(id = fct_reorder(as.factor(id), login_count)) %&gt;%\n  ggplot(aes(x = id, y = login_count, fill = login_count)) +\n  coord_flip() +\n  geom_col(width = 0.7, color = \"white\") +\n  scale_fill_gradientn(\n    colors = c(\"tomato\", \"gold\", \"forestgreen\"),\n    breaks = c(\n      min(my_data$login_count),\n      mean(my_data$login_count), max(my_data$login_count)\n    ),\n    labels = c(\"Fewer Logins\", \"Average Logins\", \"More Logins\")\n  ) +\n  labs(\n    x = \"User\",\n    y = \"Number of Logins\",\n    title = \"User Login Frequency\",\n    fill = \"Number of Logins\"\n  ) +\n  theme_minimal() +\n  theme(\n    plot.title = element_text(hjust = 0.5, size = 18),\n    axis.title.y = element_text(angle = 0, vjust = 0.5),\n    axis.title.x = element_text(vjust = -0.5)\n  )\n\n\n\n\n\n\nCode\ndata %&gt;%\n ggplot(aes(x = fct_reorder(as.factor(id), login_count), y = login_count)) +  geom_bar(stat = \"identity\", color = \"black\", fill = \"gray\") +  \n  labs(title = \"Login Counts per User\", x = \"User ID\", y = \"Login Counts\") + \n  theme_minimal() +  \n  theme(\n    axis.text.x = element_text(angle = 45, hjust = 1),  # Rotate x-axis labels to 45 degrees\n    legend.position = \"none\"  # Remove legend since it's unnecessary\n  )\n\n\n\n\n\nCode\ndata %&gt;%\n  arrange(desc(login_count)) %&gt;%\n  ggplot(aes(\n    x = reorder(as.factor(id), login_count),\n    y = login_count,\n    fill = factor(new_school_id)\n  )) +\n  geom_col() +\n  labs(title = \"Login Counts by User ID\", x = \"User ID\", y = \"Login Count\") +\n  theme_minimal() + \n  theme(axis.text.x = element_text(angle = 45, hjust = 1))\n\n\n\n\n\nCode\nlibrary(\"cowplot\")\nfig_season_1 +\n  cowplot::theme_cowplot()"
+  },
+  {
+    "objectID": "index.html#tips-from-assignment-1",
+    "href": "index.html#tips-from-assignment-1",
+    "title": "Data Visualization",
+    "section": "Tips from Assignment 1",
+    "text": "Tips from Assignment 1\n\n\nMatch colors to one feature\nOrdering helps\nMake axis text readable"
+  },
+  {
+    "objectID": "index.html#section",
+    "href": "index.html#section",
+    "title": "Data Visualization",
+    "section": "💩💩💩💩💩💩💩💩💩💩💩💩💩💩💩💩",
+    "text": "💩💩💩💩💩💩💩💩💩💩💩💩💩💩💩💩\n\n\n  \n\n ]"
   },
   {
     "objectID": "index.html#recap",
