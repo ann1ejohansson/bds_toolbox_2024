@@ -319,7 +319,7 @@
     "href": "index.html#own-work-1",
     "title": "Data Visualization",
     "section": "📝 Own work",
-    "text": "📝 Own work\n\n\n\n\n\n\n\n\n\n\n\nAssignment\nContent\nMaterials\nDeadline\n\n\n\n\nData Visualization Assignment 2\n[Group] Brainstorm final project\n[Individual] Copy this plot\nLecture slides\n[Read] DV Book ch. 3.7, 4.3, 5.3, 5.5, 5.6, 6.0, 6.1, 6.2, 8.1, 8.2, 8.3\n[Watch videos] Themes; Recycling Themes; Trend lines / Stats; Color scheme; Multiple plots; Facets; Saving plots\nSunday, September 22nd, 23.59\n\n\n\n\n\n\n\n\n\n\n\n\n\nCover photo made in R by Danielle Navarro"
+    "text": "📝 Own work\n\n\n\n\n\n\n\n\n\n\n\nAssignment\nContent\nMaterials\nDeadline\n\n\n\n\nData Visualization Assignment 2\n[Group] Brainstorm final project\n[Individual] Copy this plot\nLecture slides\n[Read] DV Book ch. 3.7, 4.3, 5.3, 5.5, 5.6, 6.0, 6.1, 6.2, 8.1, 8.2, 8.3\n[Watch videos] Themes; Recycling Themes; Trend lines / Stats; Color scheme; Multiple plots; Facets; Saving plots\nSunday, September 22nd, 23.59"
   },
   {
     "objectID": "slides_class1.html#content",
@@ -586,5 +586,19 @@
     "title": "Data Visualization",
     "section": "Project 5",
     "text": "Project 5\n\nAudience: Prowise team / Data scientist\nInvestigate the scores [expected / observed] per [item/user/groups] within psychometric models. For example:\n\nHow fast are the [expected_scores] converging to [observed_scores]? Show the relation with playing frequency\nDifferent categories of model misfits (e.g., discrepancies between [expected & observed scores per item/user]\nInvestigate item drift\n\n\n\n\n\n\n\n\n\nCover photo made in R by Danielle Navarro"
+  },
+  {
+    "objectID": "index.html#feedback-assignment-2",
+    "href": "index.html#feedback-assignment-2",
+    "title": "Data Visualization",
+    "section": "Feedback Assignment 2",
+    "text": "Feedback Assignment 2\n\nFirst impressions matter!\nSpecify and consider your target audience\nExplore how much data you have per group - is your data selection reasonable?\n\nCan you also visualize this somehow?\n\nCheck the range of your data, especially concerning the time frame.\nMath Garden-specific: do not include grades above 8.\nWhen plotting individual users, explore your effects in a few different users."
+  },
+  {
+    "objectID": "index.html#today---interactive-data-viz",
+    "href": "index.html#today---interactive-data-viz",
+    "title": "Data Visualization",
+    "section": "Today - Interactive Data Viz",
+    "text": "Today - Interactive Data Viz\n\nPlotly\nR Shiny\n\n\n\n\n\n\n\n\nCover photo made in R by Danielle Navarro"
   }
 ]
